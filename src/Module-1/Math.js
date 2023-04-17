@@ -1,35 +1,22 @@
-"use strict";
-//! Formulas
-const {log} = console // deestructurando para uso ma agíl
-log("hola")
+'use strict';
 
-//? Perimetro de un cuadrado
-    console.group("Cuadrado")
-function squerePerimeter(side) {
-    let perimeter = side * 4;
-    log(`Your side is ${side}. The perimeter is ${perimeter}`)
-}
-squerePerimeter(5)
+// Formulas
+function square(side) {
+    const perimeter = side * 4;
+    const area = side ** 2;
 
-//?Area de un cuadrado
-function squareArea(side) {
-    let area = side ** 2
-    log(`Your side is ${side}. The area is ${area}`)
+    const result = `Square side: ${side} | perimeter: ${perimeter}, area: ${area}`;
+    console.log(result);
 }
-squareArea(5)
-    console.groupEnd("Cuadrado")
-//? perimetro de un triangulo
-    console.group("Triangle")
-function trianglePerimeter(side1, side2, side3) {
-    let perimeter = side1 + side2 +side3;
-    log(`Your sides are ${side1}, ${side2}, ${side3}. The perimeter is ${perimeter}`)
-}
-trianglePerimeter(5, 4, 3);
+square(5);
 
-//? area de un triangulo
-function triangleArea(base, high) {
-    let area = (base * high) / 2;
-    log(`Your base is ${base} and your high ${high}. The area is ${area}`)
+function triangle(side1, side2, side3) {
+    const perimeter = side1 + side2 + side3;
+    // Heron formula
+    const S = perimeter / 2;
+    const area = Math.sqrt(S*(S - side1)*(S - side2)*(S - side3))
+
+    const result = `Triangle sides: ${side1}, ${side2}, ${side3},  | perimeter: ${perimeter}, area: ${area}`;
+    console.log(result);
 }
-triangleArea(4, 6)
-    console.groupEnd("Triangle")
+triangle(5, 6, 8);
