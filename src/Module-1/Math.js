@@ -20,3 +20,12 @@ function triangle(side1, side2, side3) {
     console.log(result);
 }
 triangle(5, 6, 8);
+
+function circle(radio) {
+    const perimeter = 2 * radio * Math.PI;
+    const area = (radio ** 2) * Math.PI;
+
+    const result = `Circle radio: ${radio} | perimeter: ${perimeter}, area: ${area}`;
+    console.log(result);
+}
+circle(7)
