@@ -62,3 +62,15 @@ function scalaneTriangleheight(side1, side2, side3) {
     }
 }
 scalaneTriangleheight(3,4,5)
+// clase 5: Playground (Calcula la Altura de un Triángulo Escaleno)
+function Playground1(side1, side2, side3) {
+    if (side1 == side2 || side1 == side3 || side2 == side3) {
+        return false
+    } else {
+        const S = (side1 + side2 + side3) / 2;
+        const height = Math.floor((2 / side1) * (Math.sqrt( S * (S - side1) * (S - side2) * (S - side3) ) ));
+        return height
+    }
+}
+Playground1(16,8,10) // 4 
+Playground1(6,6,6) // false
