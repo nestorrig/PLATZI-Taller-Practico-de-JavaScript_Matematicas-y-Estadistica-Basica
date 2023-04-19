@@ -74,3 +74,12 @@ function Playground1(side1, side2, side3) {
 }
 Playground1(16,8,10) // 4 
 Playground1(6,6,6) // false
+
+// Clase 6: Cómo calcular porcentajes
+function percentage(originalPrice, discount) {
+    const newPrice = (originalPrice * (100 - discount)) / 100;
+    
+    const result = `Original amount: ${originalPrice}, discount: %${discount} | New price: ${newPrice}`
+    console.log(result);
+}
+percentage(120, 15)

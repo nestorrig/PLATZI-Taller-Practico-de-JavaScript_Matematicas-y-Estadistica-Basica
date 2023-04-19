@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--light-peach);
+}
+:root {
+    --light-red: #FF6969;
+    --light-blue: #A6D0DD;
+    --light-pink: #FFD3B0;
+    --light-peach: #FFF9DE;
+}
+
+header {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-red);
+    color: var(--light-peach) ;
+}
+.header-title {
+    margin-left: 15px;
+    font-size: 2.4rem;
+}
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 12px;
+}
+.header-nav ul li {
+    margin-left: 12px;
+    font-size: 1.2rem;
+}
+main {
+    width: 100%;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+section {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    padding: 15px 0 ;
+    font-size: 3.2rem;
+}
+h2 {
+    padding: 12px;
+    font-size: 2.4rem;
+}
+.data-section {
+    border: 3px solid var(--light-red);
+    border-radius: 10px;
+    background-color: var(--light-blue);
+}
+.data-container {
+    padding: 20px;
+    font-size: 2.2rem;
+}
+.data-container p {
+    margin-bottom: 8px;
+}
+.data-container input {
+    width: 100px;
+    height: 24px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border: 1px solid var(--light-pink);
+}
+input:focus{
+    border: 1px solid var(--light-red);
+    outline: none;
+}
+.result-section {
+    margin: 24px auto;
+    padding: 20px;
+    width: 80%;
+    border: 3px solid var(--light-red);
+    border-radius: 10px;
+    background-color: var(--light-blue);
+}
+.button-container button {
+    width: 100px;
+    height: 36px;
+    font-size: 1.8rem;
+    border: 2px solid var(--light-pink);
+    border-radius: 8px;
+}
+button:focus {
+    border: 2px solid var(--light-red);
+    outline: none;
+    font-size: 2rem;
+}
+
+.result-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+#Result {
+    margin-left: 12px;
+    font-weight: 500;
+}

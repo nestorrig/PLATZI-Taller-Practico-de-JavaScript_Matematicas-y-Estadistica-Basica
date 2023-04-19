@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Descuentos</title>
+</head>
+<body>
+    <header>
+        <div class="header-title">Calculator</div>
+        <nav class="header-nav">
+            <ul>
+                <li>Other calculators</li>
+                <li>Wiki</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="title-section">
+            <h1>Discounts</h1>
+        </section>
+        <section class="data-section">
+            <h2>Insert your Data</h2>
+            <div class="data-container">
+                <article class="price-container">
+                    <p>Insert price</p>
+                    <input type="number" id="Price-input">
+                </article>
+                <article class="discount-container">
+                    <p>Insert discount</p>
+                    <input type="number" min="0" max="100" step="1" id="Discount-input">
+                </article>
+            </div>
+        </section>
+        <section class="result-section">
+            <div class="button-container">
+                <button id="Percentage-button">Calculate</button>
+            </div>
+            <div class="result-container">
+                <p>New Price:</p>
+                <p id="Result"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
