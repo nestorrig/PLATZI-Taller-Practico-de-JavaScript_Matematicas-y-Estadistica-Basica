@@ -109,3 +109,10 @@ button:focus {
     margin-left: 12px;
     font-weight: 500;
 }
+#Message {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: red;
+    font-weight: 200;
+}
