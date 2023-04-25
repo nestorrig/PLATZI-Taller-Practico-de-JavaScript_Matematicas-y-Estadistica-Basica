@@ -44,11 +44,6 @@ function CalculateDiscount() {
         message.innerText = 'Please intert price';
         return
     }
-    if (discount > 100) {
-        message.classList.add('error')
-        message.innerText = "Discount can't be more than 100%";
-        return
-    }    
     const newPrice = (price * (100 - discount)) / 100 || price;
     result.innerText = `$${newPrice}`
     message.classList.remove('error')
