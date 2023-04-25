@@ -23,15 +23,25 @@
             <h1>Discounts</h1>
         </section>
         <section class="data-section">
-            <h2>Insert your Data</h2>
+            <h2>Sale details</h2>
             <div class="data-container">
                 <article class="price-container">
                     <p>Insert price</p>
                     <input type="number" id="Price-input">
                 </article>
-                <article class="discount-container">
-                    <p>Insert discount</p>
-                    <input type="number" min="0" max="100" step="1" id="Discount-input">
+                <article class="ask-container">
+                    <label for="ask-input">
+                        Have a coupon?
+                    </label>
+                    <input type="checkbox" name="ask" id="ask-input">
+                </article>
+                <article class="discount-container  inactive" id="discount-section">
+                    <p>Insert coupon</p>
+                    <input type="text" min="0" max="100" step="1" id="Discount-input">
+                    <div class="Verify-coupon--container">
+                        <button id="Verify-button">Verify</button>
+                        <span Id="Verify"></span>
+                    </div>
                 </article>
             </div>
         </section>
@@ -41,7 +51,7 @@
             </div>
             <div class="result-container">
                 <p>New Price:</p>
-                <p id="Result"></p>
+                <span id="Result"></span>
             </div>
             <p id="Message"></p>
         </section>

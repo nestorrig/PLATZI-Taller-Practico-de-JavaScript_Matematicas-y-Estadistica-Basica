@@ -14,7 +14,12 @@ html {
     --light-pink: #FFD3B0;
     --light-peach: #FFF9DE;
 }
-
+.inactive {
+    display: none;
+}
+.error{
+    color: red;
+}
 header {
     height: 48px;
     width: 100%;
@@ -66,16 +71,27 @@ h2 {
 .data-container p {
     margin-bottom: 8px;
 }
-.data-container input {
+.discount-container input,
+.price-container input {
     width: 100px;
     height: 24px;
     margin-bottom: 20px;
     padding-left: 12px;
     border: 1px solid var(--light-pink);
+    background-color: var(--light-peach);
 }
 input:focus{
     border: 1px solid var(--light-red);
     outline: none;
+}
+.ask-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.ask-container #ask-input   {
+    width: 24px;
+    margin-left: 12px;
 }
 .result-section {
     margin: 24px auto;
@@ -85,19 +101,35 @@ input:focus{
     border-radius: 10px;
     background-color: var(--light-blue);
 }
-.button-container button {
+#Verify-button,
+#Percentage-button{
     width: 100px;
     height: 36px;
     font-size: 1.8rem;
     border: 2px solid var(--light-pink);
     border-radius: 8px;
+    background-color: var(--light-peach);
 }
-button:focus {
+#Verify-button {
+    width: 80px;
+    height: 30px;
+}
+#Verify-button:focus,
+#Percentage-button:focus {
     border: 2px solid var(--light-red);
     outline: none;
     font-size: 2rem;
 }
-
+.Verify-coupon--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Verify {
+    margin-top: 12px;
+    font-size: 1.6rem;
+}
 .result-container {
     margin-top: 20px;
     display: flex;
@@ -113,6 +145,5 @@ button:focus {
     margin-top: 12px;
     text-align: center;
     font-size: 1.8rem;
-    color: red;
     font-weight: 200;
 }
