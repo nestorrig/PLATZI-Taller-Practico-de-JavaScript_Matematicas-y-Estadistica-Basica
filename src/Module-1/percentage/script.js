@@ -23,8 +23,8 @@ function checked() {
 verifyButton.addEventListener("click", verifyCoupon);
 function verifyCoupon() {
     const discount = discountInput.value
-    discountPercentage = `${coupons[`${discount}`]}`; 
-    if (discountPercentage == 'undefined') {
+    discountPercentage = coupons[discount]; 
+    if (discountPercentage == undefined) {
         verify.classList.add('error')
         verify.innerText = 'Invalid coupon'
     } else {
@@ -37,7 +37,7 @@ function verifyCoupon() {
 button.addEventListener("click", CalculateDiscount)
 function CalculateDiscount() {
     const price = parseInt(priceInput.value) || 0
-    const discount = parseInt(discountPercentage) || 0;
+    const discount = discountPercentage || 0;
     if (!price) {
         result.innerText =''
         message.classList.add('error')
