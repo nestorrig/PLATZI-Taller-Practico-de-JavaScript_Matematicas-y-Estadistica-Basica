@@ -11,6 +11,22 @@ function average(array) {
 }
 average(numbers) // 44.133333
 average(numbers2) // 3
+
 // saber si un array es par o no
 const isEven = array => array.length % 2 == 0 ? true : false
 isEven(numbers)
+
+function mediana(array) {
+    const newArray  = array.sort((a, b) => a - b);
+    const isEven = array.length % 2 == 0 ? true : false
+    if (isEven) {
+
+    } else {
+        const indexMediana = Math.floor(newArray.length / 2);
+        const median = newArray[indexMediana]
+        console.log(median);
+    }
+    console.log(newArray);
+}
+mediana(numbers)
+mediana(numbers2)
