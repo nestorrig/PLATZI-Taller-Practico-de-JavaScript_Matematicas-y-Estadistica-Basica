@@ -26,7 +26,7 @@ function mediana(array) {
         const list = [arrayB[index1], arrayB[index2]]
         median = average(list)
     } else {
-        let indexMediana = Math.floor(arrayB.length / 2);
+        const indexMediana = Math.floor(arrayB.length / 2);
         median = arrayB[indexMediana]
     }
     console.log(arrayB);
