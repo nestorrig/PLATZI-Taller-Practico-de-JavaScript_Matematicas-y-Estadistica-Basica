@@ -41,12 +41,7 @@ function mode(array) {
     const frecuency = {};
 
     array.forEach(number => {
-        // frecuency[number] = (frecuency[number] || 0) + 1;
-        if (frecuency[number]) {
-            frecuency[number] += 1;
-        } else {
-            frecuency[number] = 1;
-        }
+        frecuency[number] = (frecuency[number] || 0) + 1;
     });
 
     console.log(frecuency);
@@ -61,5 +56,88 @@ function mode(array) {
         }
     }
     console.log(mode);
+    // const arraydesordenado = Object.entries(frecuency)
+    // console.log(arraydesordenado);
+    // let arrayOrdenado = arraydesordenado.sort((a,b) => a[1] - b[1])
+    // console.log(arrayOrdenado);
 }
 mode(numbers3)
+
+// Explicación
+// ---
+// Dependiendo de las dimensiones del arreglo, serán los corchetes seguidos que podemos usar para acceder a tal elemento de la lista, veamos el siguiente arreglo de tres dimensiones:
+
+
+
+// ```js
+// const array3D = [
+//     [
+//         [1, 2, 3], 
+//         [4, 5, 6],
+//         [7, 8, 9]
+//     ]
+// ];
+// ```
+// Supongamos que queremos acceder al número **3**:
+
+
+// ```js
+// // paso 1
+// array3D[0] // [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ]
+// // paso 2
+// array3D[0][0] // [ 1, 2, 3 ]
+// // paso 3
+// array3D[0][0][2] // 3
+// ```
+
+// Ahora que ya sabes como acceder a los elementos de un arreglo dependiendo su dimensión, ahora estás listo para resolver el reto.
+
+// ---
+// > Como lo dijo el profe Juan DC, es relativamente facil, pero tenias que pensarlo un buen rato.
+
+// 1. Tenemos el siguiente arreglo:
+
+
+// ```js
+// const numbers3 = [1,1,2,3,5,5,5,5,6,9,9,8,8,1,4,4,5,5,5,1,1,1,1]
+// ```
+// 2. Lo trasformamos en un objeto que tenga al número(key) y las veces que se repite(value):
+
+
+
+// ```js
+// { '1': 7, '2': 1, '3': 1, '4': 2, '5': 7, '6': 1, '8': 2, '9': 2 }
+// ```
+// 3. Usamos ```Object.entries()``` para obtener un array de dos dimensiones:
+
+
+// ```js
+// [
+//   [ '1', 7 ],
+//   [ '2', 1 ],
+//   [ '3', 1 ],
+//   [ '4', 2 ],
+//   [ '5', 7 ],
+//   [ '6', 1 ],
+//   [ '8', 2 ],
+//   [ '9', 2 ]
+// ]
+// ```
+// Entonces como los ordenamos usando solo los valores de los values, **pues de igual manera que usamos el método sort, pero yendo al segundo nivel**, así queda:
+
+
+// ```js
+// let arrayOrdenado = arraydesordenado.sort((a,b) => a[1] - b[1])
+//     console.log(arrayOrdenado);
+
+// [
+//   [ '2', 1 ],
+//   [ '3', 1 ],
+//   [ '6', 1 ],
+//   [ '4', 2 ],
+//   [ '8', 2 ],
+//   [ '9', 2 ],
+//   [ '1', 7 ],
+//   [ '5', 7 ]
+// ]
+// ```
