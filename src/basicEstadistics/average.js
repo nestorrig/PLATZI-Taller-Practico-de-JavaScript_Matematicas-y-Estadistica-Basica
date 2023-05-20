@@ -56,10 +56,6 @@ function mode(array) {
         }
     }
     console.log(mode);
-    // const arraydesordenado = Object.entries(frecuency)
-    // console.log(arraydesordenado);
-    // let arrayOrdenado = arraydesordenado.sort((a,b) => a[1] - b[1])
-    // console.log(arrayOrdenado);
 }
 mode(numbers3)
 
