@@ -75,11 +75,11 @@ class PlatziMath {
         let median
         const arrayB  = array.sort((a, b) => a - b);
         
-        if (isEven(array)) {
+        if (PlatziMath.isEven(array)) {
             const index1 = arrayB.length / 2;
             const index2 = (arrayB.length / 2) - 1;
             const list = [arrayB[index1], arrayB[index2]]
-            median = average(list)
+            median = PlatziMath.average(list)
         } else {
             const indexMediana = Math.floor(arrayB.length / 2);
             median = arrayB[indexMediana]
