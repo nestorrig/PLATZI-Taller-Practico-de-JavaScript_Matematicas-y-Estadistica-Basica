@@ -32,10 +32,12 @@ function increasesAndDecreases(array) {
         let percentage = ( increse / pastSalary)// esto me da el porcentaje
         upsAndDowns.push(percentage)
     }
-    console.log(upsAndDowns)
-    console.log(array);
-    let nextIncrease = PlatziMath.average(upsAndDowns)
-    let nextSalary = Math.ceil(array.at(-1) + (array.at(-1) * (nextIncrease)))
-    console.log(array.at(-1), nextIncrease);
+    let lastSalary = array.at(-1);
+    let nextIncrease = PlatziMath.mediana(upsAndDowns)
+    let finalIncrease = lastSalary * nextIncrease;
+    let nextSalary = Math.ceil(lastSalary + finalIncrease);
+    console.log({
+        array, upsAndDowns, lastSalary, nextIncrease,
+    });
     return nextSalary
 }
