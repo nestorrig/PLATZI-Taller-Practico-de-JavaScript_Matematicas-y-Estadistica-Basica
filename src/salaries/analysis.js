@@ -3,9 +3,6 @@
 function findPerson(personId) {
     return salaries.find(person => person.id === personId);
 }
-function findPersonByName(personName) {
-    return salaries.find(person => person.name === personName);
-}
 function salaryHistory(personId) {
     const jobs = findPerson(personId).jobs;
     const salary= jobs.map(element => {
@@ -19,7 +16,7 @@ function mediaPerPersone(personId) {
     const medianSalary = PlatziMath.mediana(salary)
     return medianSalary
 }
-function salaryProjetion(personId) {
+function projectionPerPersone(personId) {
     const jobs = findPerson(personId).jobs;
     const salary = jobs.map(element => {
         return element.salary
@@ -27,18 +24,18 @@ function salaryProjetion(personId) {
     return increasesAndDecreases(salary)
 }
 function increasesAndDecreases(array) {
-    const arrayb = [];
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        if (i > 0 ) {
-            let differenceAbsolute = element - array[i-1]
-            let differenceRelative = Math.ceil(( differenceAbsolute / array[i-1]) * 100)// esto me da el porcentaje
-            arrayb.push(differenceRelative)
-            console.log(differenceRelative)
-        } 
+    const upsAndDowns = [];
+    for (let i = 1; i < array.length; i++) {
+        const actualSalary = array[i];
+        const pastSalary = array[i - 1]
+        let increse = actualSalary - pastSalary;
+        let percentage = ( increse / pastSalary)// esto me da el porcentaje
+        upsAndDowns.push(percentage)
     }
-    let nextIncreaseOrDecrease = PlatziMath.average(arrayb)
-    let newSalary = Math.ceil(array.at(-1) + (array.at(-1) * (nextIncreaseOrDecrease / 100)))
-    console.log(array.at(-1), nextIncreaseOrDecrease);
-    return newSalary
+    console.log(upsAndDowns)
+    console.log(array);
+    let nextIncrease = PlatziMath.average(upsAndDowns)
+    let nextSalary = Math.ceil(array.at(-1) + (array.at(-1) * (nextIncrease)))
+    console.log(array.at(-1), nextIncrease);
+    return nextSalary
 }
