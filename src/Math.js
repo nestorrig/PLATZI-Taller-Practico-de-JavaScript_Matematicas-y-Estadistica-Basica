@@ -105,6 +105,7 @@ class PlatziMath {
                 mode.push(parseInt(num));
             }
         }
+        console.log(mode);
         return mode
     }
 }
