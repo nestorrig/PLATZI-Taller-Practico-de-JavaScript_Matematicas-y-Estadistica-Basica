@@ -67,8 +67,9 @@ salaries.map(person => {
 })
 console.log({companies, enterprises});
 function medianSalariesPerCompanieAndYear(companie, year) {
-    const salaries = companies[companie];
-    const yearSalaries = salaries[year]
-    console.log(yearSalaries);
-    return PlatziMath.mediana(yearSalaries)
+    // const salaries = companies[companie];
+    // const yearSalaries = salaries[year]
+    // console.log(yearSalaries);
+    // return PlatziMath.mediana(yearSalaries)
+    return PlatziMath.mediana(companies[companie][year])
 }
