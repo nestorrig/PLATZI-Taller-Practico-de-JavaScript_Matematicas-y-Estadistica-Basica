@@ -65,4 +65,10 @@ salaries.map(person => {
         enterprises[company][year].push(salary)
     }
 })
-console.table({companies, enterprises});
+console.log({companies, enterprises});
+function medianSalariesPerCompanieAndYear(companie, year) {
+    const salaries = companies[companie];
+    const yearSalaries = salaries[year]
+    console.log(yearSalaries);
+    return PlatziMath.mediana(yearSalaries)
+}
