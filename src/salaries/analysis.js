@@ -21,25 +21,25 @@ function projectionPerPersone(personId) {
     const salary = jobs.map(element => {
         return element.salary
     })
-    function increasesAndDecreases(array) {
-        const upsAndDowns = [];
-        for (let i = 1; i < array.length; i++) {
-            const actualSalary = array[i];
-            const pastSalary = array[i - 1]
-            let increse = actualSalary - pastSalary;
-            let percentage = ( increse / pastSalary)// esto me da el porcentaje
-            upsAndDowns.push(percentage)
-        }
-        let lastSalary = array.at(-1);
-        let nextIncrease = PlatziMath.mediana(upsAndDowns)
-        let finalIncrease = lastSalary * nextIncrease;
-        let nextSalary = Math.ceil(lastSalary + finalIncrease);
-        console.log({
-            array, upsAndDowns, lastSalary, nextIncrease,
-        });
-        return nextSalary
-    }
     return increasesAndDecreases(salary)
+}
+function increasesAndDecreases(array) {
+    const upsAndDowns = [];
+    for (let i = 1; i < array.length; i++) {
+        const actualSalary = array[i];
+        const pastSalary = array[i - 1]
+        let increse = actualSalary - pastSalary;
+        let percentage = ( increse / pastSalary)// esto me da el porcentaje
+        upsAndDowns.push(percentage)
+    }
+    let lastSalary = array.at(-1);
+    let nextIncrease = PlatziMath.mediana(upsAndDowns)
+    let finalIncrease = lastSalary * nextIncrease;
+    let nextSalary = Math.ceil(lastSalary + finalIncrease);
+    console.log({
+        array, upsAndDowns, lastSalary, nextIncrease,
+    });
+    return nextSalary
 }
 //? Analisis Empresarial
 const companies = {}
@@ -67,9 +67,24 @@ salaries.map(person => {
 })
 console.log({companies, enterprises});
 function medianSalariesPerCompanieAndYear(companie, year) {
-    // const salaries = companies[companie];
-    // const yearSalaries = salaries[year]
-    // console.log(yearSalaries);
-    // return PlatziMath.mediana(yearSalaries)
-    return PlatziMath.mediana(companies[companie][year])
+    if(!companies[companie]) {
+        console.warn("La compañia no existe")
+    }else if(!companies[companie][year]) {
+        console.warn("La compañia no dio salarios ese año")
+    }else {
+        return PlatziMath.mediana(companies[companie][year])
+    }
+}
+function projectionPerCompanie(companie) {
+    if(!companies[companie]) {
+        console.warn("La compañia no existe")
+        return
+    }
+    const salaries = companies[companie];
+    const medianSalaryByYear = [];
+    for (const key in salaries) {
+        let median = PlatziMath.mediana(salaries[key]);
+        medianSalaryByYear.push(median)
+    }
+    return increasesAndDecreases(medianSalaryByYear)
 }
