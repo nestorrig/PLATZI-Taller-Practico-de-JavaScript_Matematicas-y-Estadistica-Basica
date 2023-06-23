@@ -108,4 +108,19 @@ class PlatziMath {
         console.log(mode);
         return mode
     }
+    static ordenarLista = function ordenarLista(listaDesordenada) {
+        function ordenarListaSort(valorAcumulado, nuevoValor) {
+            return valorAcumulado - nuevoValor;
+        }
+        const lista = listaDesordenada.sort(ordenarListaSort);
+        return lista;
+    }
+    
+    static ordenarListaBidimensional = function ordenarListaBidimensional(listaDesordenada, i) {
+        function ordenarListaSort(valorAcumulado, nuevoValor) {
+            return valorAcumulado[i] - nuevoValor[i];
+        }     
+        const lista = listaDesordenada.sort(ordenarListaSort);
+        return lista;
+    }
 }

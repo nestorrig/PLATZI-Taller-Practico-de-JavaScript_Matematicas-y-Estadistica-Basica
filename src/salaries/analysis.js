@@ -88,3 +88,17 @@ function projectionPerCompanie(companie) {
     }
     return increasesAndDecreases(medianSalaryByYear)
 }
+//? Analisis general
+function generalMedian(){
+    const medianPerson = salaries.map(person => mediaPerPersone(person.id))
+    // console.log(medianPerson);
+    return PlatziMath.mediana(medianPerson)
+}
+function topTenMedian(){
+    const medianPerson = salaries.map(person => mediaPerPersone(person.id));
+    const orderedList = PlatziMath.ordenarLista(medianPerson);
+    const topTenPeople = orderedList.length / 10;
+    const limit = orderedList.length - topTenPeople;
+    const medianTopTen = PlatziMath.mediana(orderedList.slice(limit, orderedList.length));
+    return medianTopTen
+}
