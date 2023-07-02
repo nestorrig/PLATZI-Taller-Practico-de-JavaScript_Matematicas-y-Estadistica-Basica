@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Calculators</p>
+            <ul class="mobile-menu">
+                <li>
+                    <a href="#Home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#Geometry">
+                        Geometry
+                    </a>
+                </li>
+                <li>
+                    <a href="#Basic-statistics">
+                        Basic statistics
+                    </a>
+                </li>
+                <li>
+                    <a href="#Discounts">
+                        Discounts
+                    </a>
+                </li>
+                <li>
+                    <a href="#Salaries">
+                        Salaries
+                    </a>
+                </li>
+            </ul>
+            <span class="icon-menu">
+
+            </span>
+        </nav>
+    </header>
+    <main>
+        <section id="Home">
+            <h1>Find the calculator that you need</h1>
+            <div class="calculators-container">
+                <article class="calculator--item">
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <article>
+                        <h4>Geometry</h4>
+                        <a href="#Geometry">Get in</a>
+                    </article>
+                </article>
+                <article class="calculator--item">
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <article>
+                        <h4>Estatistics</h4>
+                        <a href="#Basic-statistics">Get in</a>
+                    </article>
+                </article>
+                <article class="calculator--item">
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <article>
+                        <h4>Discounts</h4>
+                        <a href="#Discounts">Get in</a>
+                    </article>
+                </article>
+                <article class="calculator--item">
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <article>
+                        <h4>Salaries</h4>
+                        <a href="#Salaries">Get in</a>
+                    </article>
+                </article>
+            </div>
+        </section>
+
+        <section id="Geometry">
+            <h2>Geometry</h2>
+            <div class="options-container in-geometry">
+                <a href="#Square">Square</a>
+                <a href="#Triangle">Triangle</a>
+                <a href="#Circle">Circle</a>
+            </div>
+            <article id="Square" class="geometry-item">
+                <h3>
+                    Perimeter and Area of a square
+                </h3>
+                <figure>
+                    
+                </figure>
+                <div class="form-container is-square">
+                    <form>
+                        <label for="side-square">
+                            <span>Side length</span>
+                            <input type="number" id="side-square" placeholder="15">
+                        </label>
+                        <button>Calculate</button>
+                        <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                            event.preventDefault()
+                        }); -->
+                    </form>
+                    <article>
+                        <p>
+                            Perimeter = <span id="square-perimeter"></span>
+                        </p>
+                        <p>
+                            Area = <span id="square-area"></span>
+                        </p>
+                    </article>
+                </div>
+            </article>
+            <article id="#Triangle" class="geometry-item">
+                <article class="triangle--item is-triangle">
+                        <h3>
+                            Perimeter and Area of a triangle
+                        </h3>
+                        <figure>
+                    
+                        </figure>
+                        <div class="form-container is-triangle">
+                            <form>
+                                <label for="side1-triangle">
+                                    <span>Side 1</span>
+                                    <input type="number" id="side1-triangle" placeholder="15">
+                                </label>
+                                <label for="side2-triangle">
+                                    <span>Side 2</span>
+                                    <input type="number" id="side2-triangle" placeholder="15">
+                                </label>
+                                <label for="side3-triangle">
+                                    <span>Side 3</span>
+                                    <input type="number" id="side3-triangle" placeholder="15">
+                                </label>
+                                <button>Calculate</button>
+                                <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                                    event.preventDefault()
+                                }); -->
+                            </form>
+                            <article>
+                                <p>
+                                    Perimeter = <span id="triangle-perimeter"></span>
+                                </p>
+                                <p>
+                                    Area = <span id="triangle-area"></span>
+                                </p>
+                            </article>
+                        </div>
+                </article>
+                <h5>
+                    Looking for triangles height? <span id="show-triangles"></span>
+                </h5>
+
+                <div class="options-container in-triangles" id="More-triangles">
+                    <a href="#Scalene">Scalene</a>
+                    <a href="#Isosceles">Isosceles</a>
+                </div>
+                <div class="triangles-container">
+                    <article id="Scalene" class="triangle--item is-scalane">
+                        <h3>
+                            Height of a scalene triangle
+                        </h3>
+                        <figure>
+                    
+                        </figure>
+                        <div class="form-container is-scalane">
+                            <form>
+                                <label for="side1-scalane-triangle">
+                                    <span>Side 1</span>
+                                    <input type="number" id="side1-scalane-triangle" placeholder="15">
+                                </label>
+                                <label for="side2-scalane-triangle">
+                                    <span>Side 2</span>
+                                    <input type="number" id="side2-scalane-triangle" placeholder="15">
+                                </label>
+                                <label for="side3-scalane-triangle">
+                                    <span>Side 3</span>
+                                    <input type="number" id="side3-scalane-triangle" placeholder="15">
+                                </label>
+                                <button>Calculate</button>
+                                <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                                    event.preventDefault()
+                                }); -->
+                            </form>
+                            <article>
+                                <p>
+                                    Perimeter = <span id="scalane-perimeter"></span>
+                                </p>
+                                <p>
+                                    Area = <span id="scalane-area"></span>
+                                </p>
+                            </article>
+                        </div>
+                    </article>
+                    <article id="Isosceles" class="triangle--item is-isosceles">
+                        <h3>
+                            Height of a isosceles triangle
+                        </h3>
+                        <figure>
+                    
+                        </figure>
+                        <div class="form-container is-isosceles">
+                            <form>
+                                <label for="side-isosceles-triangle">
+                                    <span>One side</span>
+                                    <input type="number" id="side-isosceles-triangle" placeholder="15">
+                                </label>
+                                <label for="base-isosceles-triangle">
+                                    <span>Base</span>
+                                    <input type="number" id="base-isosceles-triangle" placeholder="15">
+                                </label>
+                                <button>Calculate</button>
+                                <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                                    event.preventDefault()
+                                }); -->
+                            </form>
+                            <article>
+                                <p>
+                                    Perimeter = <span id="isosceles-perimeter"></span>
+                                </p>
+                                <p>
+                                    Area = <span id="isosceles-area"></span>
+                                </p>
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </article>
+            <article id="Circle" class="geometry-item">
+                <h3>
+                    Perimeter and Area of a circle
+                </h3>
+                <figure>
+                    
+                </figure>
+                <div class="form-container is-circle">
+                    <form>
+                        <label for="radio-circle">
+                            <span>Radio</span>
+                            <input type="number" id="radio-circle" placeholder="3.14">
+                        </label>
+                        <button>Calculate</button>
+                        <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                            event.preventDefault()
+                        }); -->
+                    </form>
+                    <article>
+                        <p>
+                            Perimeter = <span id="circle-perimeter"></span>
+                        </p>
+                        <p>
+                            Area = <span id="circle-area"></span>
+                        </p>
+                    </article>
+                </div>
+            </article>
+        </section>
+
+        <section id="Discounts">
+            <h2>Discounts</h2>
+            <div class="options-container in-discounts">
+                <a href="#Percentage">By percentage</a>
+                <a href="#Coupons">By coupons</a>
+            </div>
+            <section class="data-section">
+                <h2>Insert your data</h2>
+                <div class="data-container">
+                    <article class="price-container">
+                        <label for="price-input">
+                            <span>Insert price</span>
+                            <input type="number" id="price-input">
+                        </label>
+                    </article>
+                    
+                    <article class="discount-container  is-byPercentage" id="Percentage">
+                        <label for="percentage-discount">
+                            <span>Insert discount</span>
+                            <input type="number" id="percentage-discount">
+                            <button id="Percentage-button">Calculate</button>
+                        </label>
+                        <div class="discount-result-container is-percentageResult">
+                            <span id="percentageResult"></span>
+                        </div>
+                    </article>
+                    <article class="discount-container  is-byCoupon" id="Coupons">
+                        <label for="coupon-discount">
+                            <span>Insert discount</span>
+                            <input type="text" id="coupon-discount">
+                            <button id="coupon-button">Calculate</button>
+                        </label>
+                        <div class="coupon-result-container is-couponResult">
+                            <span id="couponResult"></span>
+                        </div>
+                        <div class="coupons-clues-container">
+                            <h5>Clues for coupons</h5>
+                            <ol>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                                <li class="clue-item">
+                                    
+                                </li>
+                            </ol>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section id="Basic-statistics">
+            <h2>Basic Statistics</h2>
+            <form>
+                <label for="number-list-input">
+                    <span>Insert number list</span>
+                    <input type="text" id="number-list-input" placeholder="13,45,89,8,66,44">
+                    <button id="basic-statistics-button">Calculate</button>
+                </label>
+            </form>
+            <article class="statistics-explication-container">
+                <p>How to insert my data <span id="show-explication--arrow">//</span></p>
+                <p id="statistics-explication--sentence">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                </p>
+            </article>
+            <article class="statistics-results-container">
+                <div class="result-item">
+                    <p>Mode</p>
+                    <p id="Mode-result" class="result"></p>
+                </div>
+                <div class="result-item">
+                    <p>Mean</p>
+                    <p id="Mean-result" class="result"></p>
+                </div>
+                <div class="result-item">
+                    <p>Median</p>
+                    <p id="Median-result" class="result"></p>
+                </div>
+                <div class="result-item">
+                    <p>Range</p>
+                    <p id="Range-result" class="result"></p>
+                </div>
+            </article>
+            <article class="statistics-explication-results-container">
+                <div class="explication-item">
+                    <p>What is mode? <span id="show-explication--arrow">//</span></p>
+                    <p id="statistics-explication--sentence">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    </p>
+                </div>
+                <div class="explication-item">
+                    <p>What is mean? <span id="show-explication--arrow">//</span></p>
+                    <p id="statistics-explication--sentence">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    </p>
+                </div>
+                <div class="explication-item">
+                    <p>What is median? <span id="show-explication--arrow">//</span></p>
+                    <p id="statistics-explication--sentence">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    </p>
+                </div>
+                <div class="explication-item">
+                    <p>What is range? <span id="show-explication--arrow">//</span></p>
+                    <p id="statistics-explication--sentence">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="Salaries">
+            <h2>Salary Analysis</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur non consequuntur neque. Natus beatae similique possimus? Molestiae doloribus odit impedit perspiciatis. Commodi excepturi laborum possimus quod placeat earum doloremque qui.
+            </p>
+            <div class="options-container in-salaries">
+                <a href="#Companie">By companie</a>
+                <a href="#Employee">By employee</a>
+            </div>
+            <section class="salaries-container" id="Salaries-container">
+
+            </section>
+            <section class="projections-container" id="Projections-container">
+
+            </section>
+            <h5>
+                Looking for top ten salaries? <span id="show-top-ten"></span>
+            </h5>
+            <section>
+                
+            </section>
+        </section>
+
+    </main>
+</body>
+</html>
