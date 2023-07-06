@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Calculators</title>
+    <style>
+        #Home {background-color: aquamarine;}
+        #Geometry {background-color: chartreuse;}
+        #Discounts {background-color: royalblue;}
+        #Basic-statistics {background-color: peru;}
+        #Salaries {background-color: firebrick;}
+    </style>
 </head>
 <body>
     <header>
@@ -42,7 +50,7 @@
         </nav>
     </header>
     <main>
-        <section id="Home">
+        <section class="section-item" id="Home">
             <h1>Find the calculator that you need</h1>
             <div class="calculators-container">
                 <article class="calculator--item">
@@ -84,7 +92,7 @@
             </div>
         </section>
 
-        <section id="Geometry">
+        <section class="section-item inactive" id="Geometry">
             <h2>Geometry</h2>
             <div class="options-container in-geometry">
                 <a href="#Square">Square</a>
@@ -265,7 +273,7 @@
             </article>
         </section>
 
-        <section id="Discounts">
+        <section class="section-item inactive" id="Discounts">
             <h2>Discounts</h2>
             <div class="options-container in-discounts">
                 <a href="#Percentage">By percentage</a>
@@ -340,7 +348,7 @@
             </section>
         </section>
 
-        <section id="Basic-statistics">
+        <section class="section-item inactive" id="Basic-statistics">
             <h2>Basic Statistics</h2>
             <form>
                 <label for="number-list-input">
@@ -401,7 +409,7 @@
             </article>
         </section>
 
-        <section id="Salaries">
+        <section class="section-item inactive" id="Salaries">
             <h2>Salary Analysis</h2>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur non consequuntur neque. Natus beatae similique possimus? Molestiae doloribus odit impedit perspiciatis. Commodi excepturi laborum possimus quod placeat earum doloremque qui.
@@ -425,5 +433,6 @@
         </section>
 
     </main>
+    <script src="./js/index.js"></script>
 </body>
 </html>
