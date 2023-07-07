@@ -19,27 +19,27 @@
             <p>Calculators</p>
             <ul class="mobile-menu">
                 <li>
-                    <a href="#Home">
+                    <a class="section-link" href="#Home">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#Geometry">
+                    <a class="section-link" href="#Geometry">
                         Geometry
                     </a>
                 </li>
                 <li>
-                    <a href="#Basic-statistics">
+                    <a class="section-link" href="#Basic-statistics">
                         Basic statistics
                     </a>
                 </li>
                 <li>
-                    <a href="#Discounts">
+                    <a class="section-link" href="#Discounts">
                         Discounts
                     </a>
                 </li>
                 <li>
-                    <a href="#Salaries">
+                    <a class="section-link" href="#Salaries">
                         Salaries
                     </a>
                 </li>
@@ -59,7 +59,7 @@
                     </figure>
                     <article>
                         <h4>Geometry</h4>
-                        <a href="#Geometry">Get in</a>
+                        <a class="section-link" href="#Geometry">Get in</a>
                     </article>
                 </article>
                 <article class="calculator--item">
@@ -68,7 +68,7 @@
                     </figure>
                     <article>
                         <h4>Estatistics</h4>
-                        <a href="#Basic-statistics">Get in</a>
+                        <a class="section-link" href="#Basic-statistics">Get in</a>
                     </article>
                 </article>
                 <article class="calculator--item">
@@ -77,7 +77,7 @@
                     </figure>
                     <article>
                         <h4>Discounts</h4>
-                        <a href="#Discounts">Get in</a>
+                        <a class="section-link" href="#Discounts">Get in</a>
                     </article>
                 </article>
                 <article class="calculator--item">
@@ -86,7 +86,7 @@
                     </figure>
                     <article>
                         <h4>Salaries</h4>
-                        <a href="#Salaries">Get in</a>
+                        <a class="section-link" href="#Salaries">Get in</a>
                     </article>
                 </article>
             </div>
@@ -95,9 +95,9 @@
         <section class="section-item inactive" id="Geometry">
             <h2>Geometry</h2>
             <div class="options-container in-geometry">
-                <a href="#Square">Square</a>
-                <a href="#Triangle">Triangle</a>
-                <a href="#Circle">Circle</a>
+                <a class="geometry-link" href="#Square">Square</a>
+                <a class="geometry-link" href="#Triangle">Triangle</a>
+                <a class="geometry-link" href="#Circle">Circle</a>
             </div>
             <article id="Square" class="geometry-item">
                 <h3>
@@ -127,7 +127,7 @@
                     </article>
                 </div>
             </article>
-            <article id="#Triangle" class="geometry-item">
+            <article id="Triangle" class="geometry-item inactive">
                 <article class="triangle--item is-triangle">
                         <h3>
                             Perimeter and Area of a triangle
@@ -169,11 +169,11 @@
                 </h5>
 
                 <div class="options-container in-triangles" id="More-triangles">
-                    <a href="#Scalene">Scalene</a>
-                    <a href="#Isosceles">Isosceles</a>
+                    <a class="triangle-link" href="#Scalene">Scalene</a>
+                    <a class="triangle-link" href="#Isosceles">Isosceles</a>
                 </div>
                 <div class="triangles-container">
-                    <article id="Scalene" class="triangle--item is-scalane">
+                    <article id="Scalene" class="inactive triangle--item triangle-item is-scalane">
                         <h3>
                             Height of a scalene triangle
                         </h3>
@@ -209,7 +209,7 @@
                             </article>
                         </div>
                     </article>
-                    <article id="Isosceles" class="triangle--item is-isosceles">
+                    <article id="Isosceles" class="inactive triangle--item triangle-item is-isosceles">
                         <h3>
                             Height of a isosceles triangle
                         </h3>
@@ -243,7 +243,7 @@
                     </article>
                 </div>
             </article>
-            <article id="Circle" class="geometry-item">
+            <article id="Circle" class="geometry-item inactive">
                 <h3>
                     Perimeter and Area of a circle
                 </h3>
@@ -276,8 +276,8 @@
         <section class="section-item inactive" id="Discounts">
             <h2>Discounts</h2>
             <div class="options-container in-discounts">
-                <a href="#Percentage">By percentage</a>
-                <a href="#Coupons">By coupons</a>
+                <a class="discount-link" href="#Percentage">By percentage</a>
+                <a class="discount-link" href="#Coupons">By coupons</a>
             </div>
             <section class="data-section">
                 <h2>Insert your data</h2>
@@ -299,9 +299,9 @@
                             <span id="percentageResult"></span>
                         </div>
                     </article>
-                    <article class="discount-container  is-byCoupon" id="Coupons">
+                    <article class="discount-container  is-byCoupon inactive" id="Coupons">
                         <label for="coupon-discount">
-                            <span>Insert discount</span>
+                            <span>Insert cuopon</span>
                             <input type="text" id="coupon-discount">
                             <button id="coupon-button">Calculate</button>
                         </label>
