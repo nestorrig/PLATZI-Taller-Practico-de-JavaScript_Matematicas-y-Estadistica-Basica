@@ -7,8 +7,8 @@ const triangleLinks = document.getElementsByClassName("triangle-link");
 const discountSections = document.getElementsByClassName("discount-container");
 const discountLinks = document.getElementsByClassName("discount-link");
 
-function matchLinks(array, sections) {
-    for (const iterator of array) {
+function matchLinks(links, sections) {
+    for (const iterator of links) {
         const reference = iterator.attributes.href.value
         const referenceWithoutId = Array.from(reference)
         referenceWithoutId.shift()

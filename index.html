@@ -110,9 +110,9 @@
                     <form>
                         <label for="side-square">
                             <span>Side length</span>
-                            <input type="number" id="side-square" placeholder="15">
+                            <input type="number" min="1" step="0.01" id="side-square" placeholder="15">
                         </label>
-                        <button>Calculate</button>
+                        <button id="calculate-square">Calculate</button>
                         <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
                             event.preventDefault()
                         }); -->
@@ -139,17 +139,17 @@
                             <form>
                                 <label for="side1-triangle">
                                     <span>Side 1</span>
-                                    <input type="number" id="side1-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side1-triangle" placeholder="15">
                                 </label>
                                 <label for="side2-triangle">
                                     <span>Side 2</span>
-                                    <input type="number" id="side2-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side2-triangle" placeholder="15">
                                 </label>
                                 <label for="side3-triangle">
                                     <span>Side 3</span>
-                                    <input type="number" id="side3-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side3-triangle" placeholder="15">
                                 </label>
-                                <button>Calculate</button>
+                                <button id="calculate-triangle">Calculate</button>
                                 <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
                                     event.preventDefault()
                                 }); -->
@@ -173,38 +173,41 @@
                     <a class="triangle-link" href="#Isosceles">Isosceles</a>
                 </div>
                 <div class="triangles-container">
-                    <article id="Scalene" class="inactive triangle--item triangle-item is-scalane">
+                    <article id="Scalene" class="inactive triangle--item triangle-item is-scalene">
                         <h3>
                             Height of a scalene triangle
                         </h3>
                         <figure>
                     
                         </figure>
-                        <div class="form-container is-scalane">
+                        <div class="form-container is-scalene">
                             <form>
-                                <label for="side1-scalane-triangle">
+                                <label for="side1-scalene-triangle">
                                     <span>Side 1</span>
-                                    <input type="number" id="side1-scalane-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side1-scalene-triangle" placeholder="15">
                                 </label>
-                                <label for="side2-scalane-triangle">
+                                <label for="side2-scalene-triangle">
                                     <span>Side 2</span>
-                                    <input type="number" id="side2-scalane-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side2-scalene-triangle" placeholder="15">
                                 </label>
-                                <label for="side3-scalane-triangle">
+                                <label for="side3-scalene-triangle">
                                     <span>Side 3</span>
-                                    <input type="number" id="side3-scalane-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side3-scalene-triangle" placeholder="15">
                                 </label>
-                                <button>Calculate</button>
+                                <button id="calculate-scalene">Calculate</button>
                                 <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
                                     event.preventDefault()
                                 }); -->
                             </form>
                             <article>
                                 <p>
-                                    Perimeter = <span id="scalane-perimeter"></span>
+                                    Height 1 = <span id="scalene-height1"></span>
                                 </p>
                                 <p>
-                                    Area = <span id="scalane-area"></span>
+                                    Height 2 = <span id="scalene-height2"></span>
+                                </p>
+                                <p>
+                                    Height 3 = <span id="scalene-height3"></span>
                                 </p>
                             </article>
                         </div>
@@ -220,23 +223,20 @@
                             <form>
                                 <label for="side-isosceles-triangle">
                                     <span>One side</span>
-                                    <input type="number" id="side-isosceles-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="side-isosceles-triangle" placeholder="15">
                                 </label>
                                 <label for="base-isosceles-triangle">
                                     <span>Base</span>
-                                    <input type="number" id="base-isosceles-triangle" placeholder="15">
+                                    <input type="number" min="1" step="0.01" id="base-isosceles-triangle" placeholder="15">
                                 </label>
-                                <button>Calculate</button>
+                                <button id="calculate-isosceles">Calculate</button>
                                 <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
                                     event.preventDefault()
                                 }); -->
                             </form>
                             <article>
                                 <p>
-                                    Perimeter = <span id="isosceles-perimeter"></span>
-                                </p>
-                                <p>
-                                    Area = <span id="isosceles-area"></span>
+                                    Height = <span id="isosceles-height"></span>
                                 </p>
                             </article>
                         </div>
@@ -254,9 +254,9 @@
                     <form>
                         <label for="radio-circle">
                             <span>Radio</span>
-                            <input type="number" id="radio-circle" placeholder="3.14">
+                            <input type="number" min="1" step="0.01" id="radio-circle" placeholder="3.14">
                         </label>
-                        <button>Calculate</button>
+                        <button id="calculate-circle">Calculate</button>
                         <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
                             event.preventDefault()
                         }); -->
@@ -285,14 +285,14 @@
                     <article class="price-container">
                         <label for="price-input">
                             <span>Insert price</span>
-                            <input type="number" id="price-input">
+                            <input type="number" min="1" step="0.01" id="price-input">
                         </label>
                     </article>
                     
                     <article class="discount-container  is-byPercentage" id="Percentage">
                         <label for="percentage-discount">
                             <span>Insert discount</span>
-                            <input type="number" id="percentage-discount">
+                            <input type="number" min="1" step="0.01" id="percentage-discount">
                             <button id="Percentage-button">Calculate</button>
                         </label>
                         <div class="discount-result-container is-percentageResult">
@@ -434,5 +434,7 @@
 
     </main>
     <script src="./js/index.js"></script>
+    <script src="./src/Math.js"></script>
+    <script src="./js/geometry.js"></script>
 </body>
 </html>

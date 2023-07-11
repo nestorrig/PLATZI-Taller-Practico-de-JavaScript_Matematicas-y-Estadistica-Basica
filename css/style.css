@@ -1,3 +1,6 @@
 .inactive {
     display: none;
 }
+.error {
+    color: red;
+}
