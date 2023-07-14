@@ -53,7 +53,7 @@ class PlatziMath {
         const newPrice = (originalPrice * (100 - discount)) / 100;
         
         const result = `Original amount: ${originalPrice}, discount: %${discount} | New price: ${newPrice}`
-        return result
+        return newPrice
     }
     
     static average(array) {
