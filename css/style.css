@@ -7,3 +7,19 @@
 .correct {
     color: green;
 }
+.arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.is-up {
+    transform: rotate(180deg);
+    transition: transform .3s;
+}
+.is-down {
+    transform: rotate(0deg);
+    transition: transform .3s;
+}
+.blockText {
+    background-color: rgb(56, 138, 209);
+}

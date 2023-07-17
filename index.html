@@ -165,83 +165,89 @@
                         </div>
                 </article>
                 <h5>
-                    Looking for triangles height? <span id="show-triangles"></span>
+                    Looking for triangles height? 
+                    <span id="show-triangles">
+                        <svg class="arrow traingles-block" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                        </svg>
+                    </span>
                 </h5>
 
-                <div class="options-container in-triangles" id="More-triangles">
-                    <a class="triangle-link" href="#Scalene">Scalene</a>
-                    <a class="triangle-link" href="#Isosceles">Isosceles</a>
-                </div>
-                <div class="triangles-container">
-                    <article id="Scalene" class="inactive triangle--item triangle-item is-scalene">
-                        <h3>
-                            Height of a scalene triangle
-                        </h3>
-                        <figure>
-                    
-                        </figure>
-                        <div class="form-container is-scalene">
-                            <form>
-                                <label for="side1-scalene-triangle">
-                                    <span>Side 1</span>
-                                    <input type="number" min="1" step="0.01" id="side1-scalene-triangle" placeholder="15">
-                                </label>
-                                <label for="side2-scalene-triangle">
-                                    <span>Side 2</span>
-                                    <input type="number" min="1" step="0.01" id="side2-scalene-triangle" placeholder="15">
-                                </label>
-                                <label for="side3-scalene-triangle">
-                                    <span>Side 3</span>
-                                    <input type="number" min="1" step="0.01" id="side3-scalene-triangle" placeholder="15">
-                                </label>
-                                <button id="calculate-scalene">Calculate</button>
-                                <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
-                                    event.preventDefault()
-                                }); -->
-                            </form>
-                            <article>
-                                <p>
-                                    Height 1 = <span id="scalene-height1"></span>
-                                </p>
-                                <p>
-                                    Height 2 = <span id="scalene-height2"></span>
-                                </p>
-                                <p>
-                                    Height 3 = <span id="scalene-height3"></span>
-                                </p>
-                            </article>
-                        </div>
-                    </article>
-                    <article id="Isosceles" class="inactive triangle--item triangle-item is-isosceles">
-                        <h3>
-                            Height of a isosceles triangle
-                        </h3>
-                        <figure>
-                    
-                        </figure>
-                        <div class="form-container is-isosceles">
-                            <form>
-                                <label for="side-isosceles-triangle">
-                                    <span>One side</span>
-                                    <input type="number" min="1" step="0.01" id="side-isosceles-triangle" placeholder="15">
-                                </label>
-                                <label for="base-isosceles-triangle">
-                                    <span>Base</span>
-                                    <input type="number" min="1" step="0.01" id="base-isosceles-triangle" placeholder="15">
-                                </label>
-                                <button id="calculate-isosceles">Calculate</button>
-                                <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
-                                    event.preventDefault()
-                                }); -->
-                            </form>
-                            <article>
-                                <p>
-                                    Height = <span id="isosceles-height"></span>
-                                </p>
-                            </article>
-                        </div>
-                    </article>
-                </div>
+                <article class="blockText traingles-block inactive">
+                    <div class="options-container in-triangles" id="More-triangles">
+                        <a class="triangle-link" href="#Scalene">Scalene</a>
+                        <a class="triangle-link" href="#Isosceles">Isosceles</a>
+                    </div>
+                    <div class="triangles-container">
+                        <article id="Scalene" class="inactive triangle--item triangle-item is-scalene">
+                            <h3>
+                                Height of a scalene triangle
+                            </h3>
+                            <figure>
+                        
+                            </figure>
+                            <div class="form-container is-scalene">
+                                <form>
+                                    <label for="side1-scalene-triangle">
+                                        <span>Side 1</span>
+                                        <input type="number" min="1" step="0.01" id="side1-scalene-triangle" placeholder="15">
+                                    </label>
+                                    <label for="side2-scalene-triangle">
+                                        <span>Side 2</span>
+                                        <input type="number" min="1" step="0.01" id="side2-scalene-triangle" placeholder="15">
+                                    </label>
+                                    <label for="side3-scalene-triangle">
+                                        <span>Side 3</span>
+                                        <input type="number" min="1" step="0.01" id="side3-scalene-triangle" placeholder="15">
+                                    </label>
+                                    <button id="calculate-scalene">Calculate</button>
+                                    <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                                        event.preventDefault()
+                                    }); -->
+                                </form>
+                                <article>
+                                    <p>
+                                        Height 1 = <span id="scalene-height1"></span>
+                                    </p>
+                                    <p>
+                                        Height 2 = <span id="scalene-height2"></span>
+                                    </p>
+                                    <p>
+                                        Height 3 = <span id="scalene-height3"></span>
+                                    </p>
+                                </article>
+                            </div>
+                        </article>
+                        <article id="Isosceles" class="inactive triangle--item triangle-item is-isosceles">
+                            <h3>
+                                Height of a isosceles triangle
+                            </h3>
+                            <figure>
+                        
+                            </figure>
+                            <div class="form-container is-isosceles">
+                                <form>
+                                    <label for="side-isosceles-triangle">
+                                        <span>One side</span>
+                                        <input type="number" min="1" step="0.01" id="side-isosceles-triangle" placeholder="15">
+                                    </label>
+                                    <label for="base-isosceles-triangle">
+                                        <span>Base</span>
+                                        <input type="number" min="1" step="0.01" id="base-isosceles-triangle" placeholder="15">
+                                    </label>
+                                    <button id="calculate-isosceles">Calculate</button>
+                                    <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
+                                        event.preventDefault()
+                                    }); -->
+                                </form>
+                                <article>
+                                    <p>
+                                        Height = <span id="isosceles-height"></span>
+                                    </p>
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </article>
             </article>
             <article id="Circle" class="geometry-item inactive">
                 <h3>
@@ -357,14 +363,20 @@
             <form>
                 <label for="number-list-input">
                     <span>Insert number list</span>
-                    <input type="text" id="number-list-input" placeholder="13,45,89,8,66,44">
+                    <input type="text" id="number-list-input" placeholder="13, 45, 89, 8, 66, 44">
                     <button id="basic-statistics-button">Calculate</button>
                 </label>
             </form>
             <article class="statistics-explication-container">
-                <p>How to insert my data <span id="show-explication--arrow">//</span></p>
-                <p id="statistics-explication--sentence">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                <p id="messageUser"></p>
+                <p>How to insert my data 
+                    <span class="show-explication--arrows">
+                        <svg class="arrow explication-text" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                        </svg>
+                    </span>
+                </p>
+                <p class="blockText explication-text inactive">
+                    Enter values separated by commas, no words, decimal values are valid.
                 </p>
             </article>
             <article class="statistics-results-container">
@@ -387,27 +399,47 @@
             </article>
             <article class="statistics-explication-results-container">
                 <div class="explication-item">
-                    <p>What is mode? <span id="show-explication--arrow">//</span></p>
-                    <p id="statistics-explication--sentence">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    <p>What is mode? 
+                        <span class="show-explication--arrows">
+                            <svg class="arrow mode-text" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                            </svg>
+                        </span>
+                    </p>
+                    <p class="blockText mode-text inactive">
+                        The mode is the value that appears the most number of times in a data set.
                     </p>
                 </div>
                 <div class="explication-item">
-                    <p>What is mean? <span id="show-explication--arrow">//</span></p>
-                    <p id="statistics-explication--sentence">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    <p>What is mean? 
+                        <span class="show-explication--arrows">
+                            <svg class="arrow mean-text" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                            </svg>
+                        </span>
+                    </p>
+                    <p class="blockText mean-text inactive">
+                        The mean is adding up all the data points and dividing the sum by the number of data points (or total number of numbers). It is also known as 'arithmetic mean'.
                     </p>
                 </div>
                 <div class="explication-item">
-                    <p>What is median? <span id="show-explication--arrow">//</span></p>
-                    <p id="statistics-explication--sentence">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    <p>What is median? 
+                        <span class="show-explication--arrows">
+                            <svg class="arrow median-text" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                            </svg>
+                        </span>
+                    </p>
+                    <p class="blockText median-text inactive">
+                        The median is the middle value (or midpoint) after all the data points have been arranged in value order as a list of numbers.
                     </p>
                 </div>
                 <div class="explication-item">
-                    <p>What is range? <span id="show-explication--arrow">//</span></p>
-                    <p id="statistics-explication--sentence">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam pariatur labore illo dicta eligendi.
+                    <p>What is range? 
+                        <span class="show-explication--arrows">
+                            <svg class="arrow range-text" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                            </svg>
+                        </span>
+                    </p>
+                    <p class="blockText range-text inactive">
+                        The range is the difference between the largest value and the smallest value.
                     </p>
                 </div>
             </article>
@@ -441,5 +473,7 @@
     <script src="./src/Math.js"></script>
     <script src="./js/geometry.js"></script>
     <script src="./js/discounts.js"></script>
+    <script src="./js/statistics.js"></script>
+    <script src="./js/arrows.js"></script>
 </body>
 </html>

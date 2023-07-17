@@ -116,4 +116,9 @@ class PlatziMath {
         const lista = listaDesordenada.sort(ordenarListaSort);
         return lista;
     }
+    static range(array) {
+        const list = this.ordenarLista(array);
+        const range = list.at(-1) - list[0]
+        return range
+    }
 }
