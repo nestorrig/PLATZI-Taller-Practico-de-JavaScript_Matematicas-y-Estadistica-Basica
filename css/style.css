@@ -23,3 +23,8 @@
 .blockText {
     background-color: rgb(56, 138, 209);
 }
+.salaries {
+    width: 200px;
+    height: 250px;
+    overflow-y: scroll;
+}

@@ -454,9 +454,45 @@
                 <button id="Companies-button" class="salaries-button is-salaries">By companie</button>
                 <button id="Employees-button" class="salaries-button is-salaries">By employee</button>
             </div>
+            <h3>Salaries</h3>
             <section class="salaries-container" id="Salaries-container">
             </section>
+            <h3>Projections</h3>
             <section class="projections-container" id="Projections-container">
+
+                <h4>Median salary <span id="median-salary-title">per year</span></h4>
+                <div id="Median-salary--container" class="media-per-year">
+                    <form id="Median-salary--form">
+                        <label for="Median--options">
+                            <span class="company-span">Company</span>
+                            <span class="id-span">id</span>
+                            <select name="" id="Median--options" class="options-select"></select>
+                        </label>
+                        <label for="Median--years">
+                            <span>Year</span>
+                            <select name="year" id="Median--years"></select>
+                        </label>
+                    </form>
+                    <button id="Median-salary--button">Calculate median</button>
+                    <article class="median-per-year-results">
+                        <p id="Median-salary-result"></p>
+                    </article>
+                </div>
+
+                <h4>Median salary projection</h4>
+                <div id="Projection-salary--container" class="projection-salary">
+                    <form id="Projection-salary--form">
+                        <label for="Projection--options">
+                            <span class="company-span">Company</span>
+                            <span class="id-span">Id</span>
+                            <select name="" id="Projection--options" class="options-select"></select>
+                        </label>
+                    </form>
+                    <button id="Projection-salary--button">Calculate Projection</button>
+                    <article class="projection">
+                        <p id="Projection-salary-result"></p>
+                    </article>
+                </div>
             </section>
             <h5>
                 Looking for top ten salaries? <span id="show-top-ten"></span>
@@ -465,8 +501,8 @@
                 
             </section>
 
-            <a href="https://ssaldana-dev.github.io/analisis-salarial/">lol</a>
-            <a href="https://github.com/ssaldana-dev/analisis-salarial/blob/main/imprimir.js">lel</a>
+            <a href="https://ssaldana-dev.github.io/analisis-salarial/" target="_blank">lol</a>
+            <a href="https://github.com/ssaldana-dev/analisis-salarial/blob/main/imprimir.js" target="_blank">lel</a>
         </section>
 
     </main>
@@ -479,5 +515,6 @@
     <script src="./src/salaries/salaries.js"></script>
     <script src="./src/salaries/analysis.js"></script>
     <script src="./js/print-salaries.js"></script>
+    <script src="./js/print-salaries-projections.js"></script>
 </body>
 </html>

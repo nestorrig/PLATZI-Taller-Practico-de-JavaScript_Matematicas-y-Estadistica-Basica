@@ -34,11 +34,10 @@ function printCompanies(){
 
             yearNumber.innerText = year
             yearItem.append(yearContainer)
-            yearContainer.append(yearNumber)
-            yearContainer.append(salariesContainer)
+            yearContainer.append(yearNumber, salariesContainer)
 
             const salariesList = companies[company][year];
-            console.log(companies[company][year]);
+            // console.log(companies[company][year]);
             salariesList.forEach(salary => {
                 let salaryItem = document.createElement('li')
                 salaryItem.className = 'salary'
@@ -47,14 +46,14 @@ function printCompanies(){
                 salariesContainer.append(salaryItem)
             });
         }
-        companyElement.append(companyName)
-        companyElement.append(yearItem)
+        companyElement.append(companyName, yearItem)
         companiesDiv.append(companyElement)
     }
 
     containerSalaries.append(companiesDiv)
-    // buttonCompanies.disable(true)
+    // buttonCompanies.disabled(true)
 }
+printCompanies()
 
 buttonEmployees.addEventListener('click', printEmployees);
 function printEmployees() {
@@ -62,9 +61,9 @@ function printEmployees() {
     let employeesDiv = document.createElement('div');
     
     employeesDiv.className = 'employees-salaries salaries'
-    console.log(salaries);
+    // console.log(salaries);
     for (const salary of salaries) {
-        console.log(salary);
+        // console.log(salary);
         let employeeElement = document.createElement('div')
         let employeeDetails = document.createElement('div')
         let employeeName = document.createElement('h4')
@@ -84,24 +83,24 @@ function printEmployees() {
         let employeeYearList = document.createElement('ul');
         employeeYearColumn.className = 'year-column'
         employeeYearList.className = 'year-list'
-        employeeYearColumnName.innerText = 'Years'
+        employeeYearColumnName.innerText = 'Year'
         
         let employeeCompanyColumn = document.createElement('div');
         let employeeCompanyColumnName = document.createElement('h5');
         let employeeCompanyList = document.createElement('ul');
         employeeCompanyColumn.className = 'company-column'
         employeeCompanyList.className = 'company-list'
-        employeeCompanyColumnName.innerText = 'Companies'
+        employeeCompanyColumnName.innerText = 'Company'
         
         let employeeSalaryColumn = document.createElement('div');
         let employeeSalaryColumnName = document.createElement('h5');
         let employeeSalaryList = document.createElement('ul');
         employeeSalaryColumn.className = 'salary-column'
         employeeSalaryList.className = 'salarie-list'
-        employeeSalaryColumnName.innerText = 'Salaries'
+        employeeSalaryColumnName.innerText = 'Salary'
 
         for (const job of salary.jobs) {
-            console.log(job);
+            // console.log(job);
             let employeeCompanie = document.createElement('li');
             let employeeYear = document.createElement('li');
             let employeeSalary = document.createElement('li');
@@ -114,23 +113,16 @@ function printEmployees() {
             employeeCompanyList.append(employeeCompanie)
             employeeSalaryList.append(employeeSalary)
         }
-        employeeYearColumn.append(employeeYearColumnName)
-        employeeYearColumn.append(employeeYearList)
-        employeeCompanyColumn.append(employeeCompanyColumnName)
-        employeeCompanyColumn.append(employeeCompanyList)
-        employeeSalaryColumn.append(employeeSalaryColumnName)
-        employeeSalaryColumn.append(employeeSalaryList)
+        employeeYearColumn.append(employeeYearColumnName, employeeYearList)
+        employeeCompanyColumn.append(employeeCompanyColumnName, employeeCompanyList)
+        employeeSalaryColumn.append(employeeSalaryColumnName, employeeSalaryList)
         
-        employeeJobs.append(employeeYearColumn)
-        employeeJobs.append(employeeCompanyColumn)
-        employeeJobs.append(employeeSalaryColumn)
+        employeeJobs.append(employeeYearColumn, employeeCompanyColumn, employeeSalaryColumn)
 
-        employeeDetails.append(employeeName)
-        employeeDetails.append(employeeId)
+        employeeDetails.append(employeeName, employeeId)
 
-        employeeElement.append(employeeDetails)
-        employeeElement.append(employeeJobs)
-
+        employeeElement.append(employeeDetails, employeeJobs)
+    
         employeesDiv.append(employeeElement)
     }
     containerSalaries.append(employeesDiv)
