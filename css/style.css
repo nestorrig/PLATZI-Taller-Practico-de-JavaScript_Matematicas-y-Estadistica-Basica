@@ -1,5 +1,5 @@
 .inactive {
-    display: none;
+    display: none !important;
 }
 .error {
     color: red;

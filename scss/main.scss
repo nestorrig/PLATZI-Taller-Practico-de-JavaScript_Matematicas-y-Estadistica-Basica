@@ -1,0 +1,92 @@
+
+$blue-100:#0085ff;
+$blue-200:#69b4ff;
+$blue-300:#e0ffff;
+$orange-100:#FF6600;
+$orange-200:#ff983f;
+$orange-300:#ffffa1;
+$purple-100:#8B5FBF;
+$purple-200:#61398F;
+$purple-300:#f0dcf8;
+$red-100:#d90429;
+$red-200:#ff98aa;
+$red-300:#fdf6fd;
+$green-100:#006633;
+$green-200:#40955d;
+$green-300:#a3f9bb;
+$text-100:#FFFFFF;
+$text-200:#9e9e9e;
+$bg-100:#1E1E1E;
+$bg-200:#2d2d2d;
+$bg-300:#454545;
+
+@mixin flexible($direction , $corte , $just , $align ){
+    display         : flex;
+    flex-flow       : $direction $corte;
+    justify-content : $just;
+    align-items     : $align;
+}
+@mixin grid( $columnas , $espacio){
+    display                 : grid;
+    grid-template-columns   : repeat( $columnas , 1fr );
+    gap                     : $espacio;
+
+    // @media screen and (max-width:480px) {
+    //     grid-template-columns : 1fr ;
+    //     gap : 0em;
+    // }
+}
+@mixin mv( $medida : 480px ){
+    @media screen and (max-width: $medida ) {
+        @content;
+    }
+}
+@mixin neo( $radius , $eje ){
+    border-radius: $radius;
+    background: #e0e0e0;
+    box-shadow:  $eje $eje ($eje*2) #bebebe,
+                (-$eje) (-$eje) ($eje*2) #ffffff;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: $bg-100;
+    color: $text-100;
+}
+// h1 { font-size: 3rem;}
+
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: $blue-100;
+}
+nav {
+    position: relative;
+    width: 100%;
+    padding: 16px 8px;
+    @include flexible(row, nowrap, space-between, center);
+    p {font-size: 2rem;}
+
+    .mobile-menu {
+        position: absolute;
+        width: 60%;
+        min-width: 220px;
+        max-width: 300px;
+        padding: 0 24px;
+        height: 300px;
+        right: 0;
+        top: 70px;
+        background-color: $blue-200;
+        border-radius: 0 0 0 24px;
+        @include flexible(column, nowrap, center, center);
+        gap: 24px;
+        a {
+            font-size: 1.4rem;
+            &:hover {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+    }
+}
