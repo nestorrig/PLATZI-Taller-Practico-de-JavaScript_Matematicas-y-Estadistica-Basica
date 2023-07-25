@@ -67,6 +67,7 @@ nav .mobile-menu a:hover {
 
 main {
   width: 100%;
+  font-size: 1.6rem;
 }
 main .section-item {
   width: 100%;
@@ -74,9 +75,23 @@ main .section-item {
   padding: 0 16px;
 }
 
+h2 {
+  margin: 24px 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  margin: 24px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 #Home h1 {
   margin: 24px 0;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
 }
@@ -89,20 +104,13 @@ main .section-item {
 }
 #Home .calculators-container .calculator--item {
   background-color: #2d2d2d;
-  padding: 24px 24px 0;
+  padding: 24px;
 }
 #Home .calculators-container .calculator--item figure {
   background-color: #454545;
   width: 100%;
   height: auto;
   padding: 32px;
-}
-#Home .calculators-container .calculator--item figure img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 #Home .calculators-container .calculator--item article {
   display: -webkit-box;
@@ -118,7 +126,7 @@ main .section-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px 4px;
+  padding-top: 16px;
 }
 #Home .calculators-container .calculator--item article h4 {
   font-size: 2rem;
@@ -138,8 +146,9 @@ main .section-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 104px;
-  height: 40px;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
   font-size: 1.8rem;
   background-color: #69b4ff;
   color: #FFFFFF;
@@ -147,11 +156,927 @@ main .section-item {
   border: 2px solid #69b4ff;
 }
 #Home .calculators-container .calculator--item article .section-link:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   background-color: #454545;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
 }
 #Home .calculators-container .calculator--item article .section-link:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.blockText {
+  background-color: #454545;
+  padding: 8px 16px;
+  font-size: 1.4rem;
+}
+
+#Geometry .options-container.in-geometry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+#Geometry .options-container.in-geometry a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #40955d;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #40955d;
+}
+#Geometry .options-container.in-geometry a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Geometry .options-container.in-geometry a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Geometry .geometry-item {
+  padding-bottom: 24px;
+}
+#Geometry .geometry-item figure {
+  padding: 32px;
+}
+#Geometry .geometry-item form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Geometry .geometry-item form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+#Geometry .geometry-item form label span {
+  font-size: 1.8rem;
+}
+#Geometry .geometry-item form label input {
+  background-color: #2d2d2d;
+  border-bottom: 3px solid #a3f9bb;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+#Geometry .geometry-item form label input:focus {
+  outline: none;
+  border-color: #006633;
+}
+#Geometry .geometry-item form button {
+  margin-block: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #a3f9bb;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #a3f9bb;
+}
+#Geometry .geometry-item form button:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Geometry .geometry-item form button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Geometry .geometry-item article {
+  text-align: center;
+  padding: 24px 0;
+}
+#Geometry .geometry-item article p {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+#Geometry .geometry-item article p span {
+  font-weight: 700;
+}
+#Geometry .geometry-item h5 {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-weight: 700;
+  background-color: #454545;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Geometry .geometry-item .options-container.in-triangles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+#Geometry .geometry-item .options-container.in-triangles a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #40955d;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #40955d;
+}
+#Geometry .geometry-item .options-container.in-triangles a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Geometry .geometry-item .options-container.in-triangles a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#Discounts .options-container.in-discounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+#Discounts .options-container.in-discounts a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #8B5FBF;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #8B5FBF;
+}
+#Discounts .options-container.in-discounts a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Discounts .options-container.in-discounts a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Discounts label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+#Discounts label span {
+  font-size: 1.8rem;
+}
+#Discounts label input {
+  background-color: #2d2d2d;
+  border-bottom: 3px solid #f0dcf8;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+#Discounts label input:focus {
+  outline: none;
+  border-color: #61398F;
+}
+#Discounts button {
+  margin-block: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #8B5FBF;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #8B5FBF;
+}
+#Discounts button:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Discounts button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Discounts .coupons-clues-container h5 {
+  margin: 24px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+#Discounts .coupons-clues-container .clues-instructions {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+#Discounts .coupons-clues-container .clues-instructions span {
+  font-weight: 600;
+  color: #8B5FBF;
+}
+#Discounts .coupons-clues-container ol {
+  padding: 0 8px 32px 16px;
+}
+#Discounts .coupons-clues-container ol li {
+  margin-bottom: 8px;
+  list-style: decimal;
+  font-size: 1.2rem;
+}
+
+#Basic-statistics form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+#Basic-statistics form label span {
+  font-size: 1.8rem;
+}
+#Basic-statistics form label textarea {
+  background-color: #2d2d2d;
+  border-bottom: 3px solid #ffffa1;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  height: 160px;
+}
+#Basic-statistics form label textarea:focus {
+  outline: none;
+  border-color: #FF6600;
+}
+#Basic-statistics form label button {
+  margin-block: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #ff983f;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #ff983f;
+}
+#Basic-statistics form label button:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Basic-statistics form label button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Basic-statistics .statistics-explication-container .explication-data {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding: 8px;
+  font-weight: 700;
+  background-color: #454545;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Basic-statistics .statistics-results-container {
+  margin-block: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Basic-statistics .statistics-results-container .result-item {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  gap: 8px;
+}
+#Basic-statistics .statistics-results-container .result-item .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ff983f;
+  width: 100%;
+  height: 36px;
+  border-radius: 5px;
+}
+#Basic-statistics .statistics-explication-results-container .explication-item p:first-child {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-weight: 700;
+  background-color: #454545;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+  background-color: #1E1E1E;
+}
+#Basic-statistics .statistics-explication-results-container .explication-item p:last-child {
+  background-color: #1E1E1E;
+  margin-bottom: 24px;
+}
+
+#Salaries > p {
+  font-size: 1.4rem;
+  margin-bottom: 36px;
+}
+#Salaries .options-container.in-salaries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+#Salaries .options-container.in-salaries a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #ff3e5e;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #ff3e5e;
+}
+#Salaries .options-container.in-salaries a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Salaries .options-container.in-salaries a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Salaries .options-container.in-salaries button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #ff3e5e;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #ff3e5e;
+}
+#Salaries .options-container.in-salaries button:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Salaries .options-container.in-salaries button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Salaries #Salaries-container {
+  background-color: #2d2d2d;
+  width: 100%;
+  padding: 24px 16px;
+  overflow-y: scroll;
+}
+#Salaries #Salaries-container::-webkit-scrollbar {
+  width: 10px;
+}
+#Salaries #Salaries-container::-webkit-scrollbar-track {
+  background: #454545;
+}
+#Salaries #Salaries-container::-webkit-scrollbar-thumb {
+  background: #ff3e5e;
+  border-radius: 5px;
+  height: 40px;
+}
+#Salaries #Salaries-container::-webkit-scrollbar-thumb:hover {
+  background: #fdf6fd;
+}
+#Salaries .salaries {
+  width: 100%;
+  height: 450px;
+}
+#Salaries .companies-salaries {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+}
+#Salaries .companies-salaries .company-item {
+  border: 2px solid #ff3e5e;
+}
+#Salaries .companies-salaries .company-item h4 {
+  margin: 24px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+#Salaries .companies-salaries .company-item .company-years--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#Salaries .companies-salaries .company-item .company-years--container .company-year {
+  width: 100%;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 24px;
+}
+#Salaries .companies-salaries .company-item .company-years--container .company-year:nth-child(odd) {
+  background-color: #ff3e5e;
+}
+#Salaries .companies-salaries .company-item .company-years--container .company-year h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+#Salaries .companies-salaries .company-item .company-years--container .company-year .salaries-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+}
+#Salaries .employees-salaries {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+}
+#Salaries .employees-salaries .employee-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#Salaries .employees-salaries .employee-details .employee-id {
+  color: #ff3e5e;
+}
+#Salaries .employees-salaries .employee-jobs--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: auto;
+      -ms-flex-positive: auto;
+          flex-grow: auto;
+  width: 100%;
+  font-size: 1.4rem;
+  border: 2px solid #ff3e5e;
+}
+#Salaries .employees-salaries .employee-jobs--container h5 {
+  font-weight: 600;
+  margin-block: 8px;
+}
+#Salaries .employees-salaries .employee-jobs--container > div {
+  padding-inline: 8px;
+}
+#Salaries .employees-salaries .employee-jobs--container > div li {
+  margin-bottom: 4px;
+}
+#Salaries h4 {
+  margin: 24px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+#Salaries h3 {
+  margin: 24px 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-block: 48px;
+}
+#Salaries .projection-container {
+  padding: 16px;
+  margin-bottom: 48px;
+  background-color: #454545;
+}
+#Salaries .projection-container div {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+#Salaries .projection-container div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+#Salaries .projection-container div form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+#Salaries .projection-container div form label span {
+  font-size: 1.8rem;
+}
+#Salaries .projection-container div form label select {
+  background-color: #2d2d2d;
+  border-bottom: 3px solid #fdf6fd;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  width: auto;
+}
+#Salaries .projection-container div form label select:focus {
+  outline: none;
+  border-color: #d90429;
+}
+#Salaries .projection-container div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #ff3e5e;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #ff3e5e;
+}
+#Salaries .projection-container div a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Salaries .projection-container div a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Salaries .projection-container div button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  padding: 8px 24px;
+  font-size: 1.8rem;
+  background-color: #ff3e5e;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #ff3e5e;
+}
+#Salaries .projection-container div button:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #454545;
+}
+#Salaries .projection-container div button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#Salaries .projection-container div button:hover {
+  background-color: #2d2d2d;
+}
+#Salaries .projection-container article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  width: 100%;
+  height: 120px;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  text-align: center;
 }

@@ -117,7 +117,7 @@
                     Perimeter and Area of a square
                 </h3>
                 <figure>
-                    
+                    <img src="./img/square.svg" alt="Square image">
                 </figure>
                 <div class="form-container is-square">
                     <form>
@@ -143,7 +143,7 @@
                             Perimeter and Area of a triangle
                         </h3>
                         <figure>
-                    
+                            <img src="./img/triangle.svg" alt="Triangle image">
                         </figure>
                         <div class="form-container is-triangle">
                             <form>
@@ -193,7 +193,7 @@
                                 Height of a scalene triangle
                             </h3>
                             <figure>
-                        
+                                <img src="img/Scalene_triangle.svg" alt="Scalene triangle image">
                             </figure>
                             <div class="form-container is-scalene">
                                 <form>
@@ -232,7 +232,7 @@
                                 Height of a isosceles triangle
                             </h3>
                             <figure>
-                        
+                                <img src="./img/isosceles.svg" alt="Isosceles triangle image">
                             </figure>
                             <div class="form-container is-isosceles">
                                 <form>
@@ -264,7 +264,7 @@
                     Perimeter and Area of a circle
                 </h3>
                 <figure>
-                    
+                    <img src="./img/circle.svg" alt="Circle image">
                 </figure>
                 <div class="form-container is-circle">
                     <form>
@@ -293,7 +293,7 @@
                 <a class="discount-link" href="#Coupons">By coupons</a>
             </div>
             <section class="data-section">
-                <h2>Insert your data</h2>
+                <h3>Insert your data</h3>
                 <div class="data-container">
                     <article class="price-container">
                         <label for="price-input">
@@ -315,7 +315,7 @@
                     <article class="discount-container  is-byCoupon inactive" id="Coupons">
                         <label for="coupon-discount">
                             <span>Insert cuopon</span>
-                            <input type="text" id="coupon-discount">
+                            <input type="text" autocapitalize="none" id="coupon-discount">
                             <button type="button" id="coupon-button">Calculate</button>
                         </label>
                         <div class="coupon-result-container is-couponResult">
@@ -325,7 +325,7 @@
                             <h5>Clues for coupons</h5>
                             <p class="clues-instructions">
                                 <span>Instructions:</span>
-                                The following questions can be answered with a single word. Write your answer in lowercase. If your answer is correct, the question will turn green, and you will receive your discount. Otherwise, your answer will be rejected.
+                                The following questions can be answered with a single word. Write your answer in lowercase. If your answer is correct, the question will turn <span>purple</span>, and you will receive your discount. Otherwise, your answer will be rejected.
                             </p>
                             <ol>
                                 <li class="clue-item">
@@ -370,21 +370,22 @@
             <form>
                 <label for="number-list-input">
                     <span>Insert number list</span>
-                    <input type="text" id="number-list-input" placeholder="13, 45, 89, 8, 66, 44">
+                    <!-- <input type="text" id="number-list-input" placeholder="13, 45, 89, 8, 66, 44"> -->
+                    <textarea name="" id="number-list-input" cols="30" rows="5" placeholder="13, 45, 89, 8, 66, 44"></textarea>
                     <button type="button" id="basic-statistics-button">Calculate</button>
                 </label>
             </form>
             <article class="statistics-explication-container">
-                <p id="messageUser"></p>
-                <p>How to insert my data 
+                <p class="explication-data">How to insert my data 
                     <span class="show-explication--arrows">
                         <svg class="arrow explication-text" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024"><path  d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
                         </svg>
                     </span>
                 </p>
                 <p class="blockText explication-text inactive">
-                    Enter values separated by commas, no words, decimal values are valid.
+                    Enter values separated by commas and one space, no words, decimal values are valid.
                 </p>
+                <p id="messageUser"></p>
             </article>
             <article class="statistics-results-container">
                 <div class="result-item">
@@ -455,7 +456,7 @@
         <section class="section-item inactive" id="Salaries">
             <h2>Salary Analysis</h2>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur non consequuntur neque. Natus beatae similique possimus? Molestiae doloribus odit impedit perspiciatis. Commodi excepturi laborum possimus quod placeat earum doloremque qui.
+                The information presented below corresponds to the salary delivery of different companies to diverse employees. You can view the salaries by company or employee, and likewise, you can calculate median values and make salary projections by company and employee.
             </p>
             <div class="options-container in-salaries">
                 <button type="button" id="Companies-button" class="salaries-button is-salaries">By companie</button>
@@ -468,48 +469,43 @@
             <section class="projections-container" id="Projections-container">
 
                 <h4>Median salary <span id="median-salary-title">per year</span></h4>
-                <div id="Median-salary--container" class="media-per-year">
-                    <form id="Median-salary--form">
-                        <label for="Median--options">
-                            <span class="company-span">Company</span>
-                            <span class="id-span">id</span>
-                            <select name="" id="Median--options" class="options-select"></select>
-                        </label>
-                        <label for="Median--years">
-                            <span>Year</span>
-                            <select name="year" id="Median--years"></select>
-                        </label>
-                    </form>
-                    <button type="button" id="Median-salary--button">Calculate median</button>
+                <div id="Median-salary--container" class="media-per-year projection-container">
+                    <div>
+                        <form id="Median-salary--form">
+                            <label for="Median--options">
+                                <span class="company-span">Company</span>
+                                <span class="id-span">id</span>
+                                <select name="" id="Median--options" class="options-select"></select>
+                            </label>
+                            <label for="Median--years">
+                                <span>Year</span>
+                                <select name="year" id="Median--years"></select>
+                            </label>
+                        </form>
+                        <button type="button" id="Median-salary--button">Calculate median</button>
+                    </div>
                     <article class="median-per-year-results">
                         <p id="Median-salary-result"></p>
                     </article>
                 </div>
 
                 <h4>Median salary projection</h4>
-                <div id="Projection-salary--container" class="projection-salary">
-                    <form id="Projection-salary--form">
-                        <label for="Projection--options">
-                            <span class="company-span">Company</span>
-                            <span class="id-span">Id</span>
-                            <select name="" id="Projection--options" class="options-select"></select>
-                        </label>
-                    </form>
-                    <button type="button" id="Projection-salary--button">Calculate Projection</button>
+                <div id="Projection-salary--container" class="projection-salary projection-container">
+                    <div>
+                        <form id="Projection-salary--form">
+                            <label for="Projection--options">
+                                <span class="company-span">Company</span>
+                                <span class="id-span">Id</span>
+                                <select name="" id="Projection--options" class="options-select"></select>
+                            </label>
+                        </form>
+                        <button type="button" id="Projection-salary--button">Calculate Projection</button>
+                    </div>
                     <article class="projection">
                         <p id="Projection-salary-result"></p>
                     </article>
                 </div>
             </section>
-            <h5>
-                Looking for top ten salaries? <span id="show-top-ten"></span>
-            </h5>
-            <section>
-                
-            </section>
-
-            <a href="https://ssaldana-dev.github.io/analisis-salarial/" target="_blank">lol</a>
-            <a href="https://github.com/ssaldana-dev/analisis-salarial/blob/main/imprimir.js" target="_blank">lel</a>
         </section>
 
     </main>

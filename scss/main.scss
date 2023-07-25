@@ -5,11 +5,11 @@ $blue-300:#e0ffff;
 $orange-100:#FF6600;
 $orange-200:#ff983f;
 $orange-300:#ffffa1;
-$purple-100:#8B5FBF;
-$purple-200:#61398F;
+$purple-100:#61398F;
+$purple-200:#8B5FBF;
 $purple-300:#f0dcf8;
 $red-100:#d90429;
-$red-200:#ff98aa;
+$red-200:#ff3e5e;
 $red-300:#fdf6fd;
 $green-100:#006633;
 $green-200:#40955d;
@@ -26,16 +26,6 @@ $bg-300:#454545;
     justify-content : $just;
     align-items     : $align;
 }
-@mixin grid( $columnas , $espacio){
-    display                 : grid;
-    grid-template-columns   : repeat( $columnas , 1fr );
-    gap                     : $espacio;
-
-    // @media screen and (max-width:480px) {
-    //     grid-template-columns : 1fr ;
-    //     gap : 0em;
-    // }
-}
 @mixin mv( $medida : 480px ){
     @media screen and (max-width: $medida ) {
         @content;
@@ -49,20 +39,51 @@ $bg-300:#454545;
 }
 @mixin button-link($color){
     @include flexible(row, nowrap, center, center);
-    width: 104px;
-    height: 40px;
+    width: auto;
+    height: auto;
+    padding: 8px 24px;
     font-size: 1.8rem;
     background-color: $color;
     color: $text-100;
     border-radius: 12px;
     border: 2px solid $color;
     &:hover {
+        transition: all .3s;
         background-color: $bg-300;
-        transition: background-color .3s;
     }
     &:active {
         transform: scale(.9);
     }
+}
+@mixin titles ($font-weight){
+    margin: 24px 0;
+    font-size: $font-weight;
+    font-weight: 700;
+    text-align: center;
+}
+@mixin option-links($color){
+    @include flexible(row, wrap, center, center);
+    gap: 24px;
+    a {
+        @include button-link($color)
+    }
+}
+@mixin inputs($color, $focus-color) {
+    background-color: $bg-200;
+    border-bottom: 3px solid $color;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    &:focus {
+        outline: none;
+        border-color: $focus-color;
+    }
+}
+@mixin arrow-texts {
+    margin-bottom: 16px;
+    padding: 8px;
+    font-weight: 700;
+    background-color: $bg-300;
+    @include flexible(row, nowrap, space-between, center);
 }
 
 body {
@@ -107,18 +128,23 @@ nav {
 }
 main {
     width: 100%;
+    font-size: 1.6rem;
     .section-item {
         width: 100%;
         max-width: 1300px;
         padding: 0 16px;
     }
 }
+h2 {
+    @include titles(2.4rem);
+}
+h3 {
+    @include titles(2rem);
+}
+
 #Home {
     h1 {
-        margin: 24px 0;
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
+        @include titles(2.4rem);
     }
     .calculators-container {
         width: 100%;
@@ -127,26 +153,286 @@ main {
         gap: 36px;
         .calculator--item {
             background-color: $bg-200;
-            padding: 24px 24px 0;
+            padding: 24px;
             figure {
                 background-color: $bg-300;
                 width: 100%;
                 height: auto;
                 padding: 32px;
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
             }
             article{
                 @include flexible(row, nowrap, space-between, center);
-                padding: 16px 4px;
+                padding-top: 16px;
                 h4 {font-size: 2rem; font-weight: 500;}
                 .section-link {
                     @include button-link($blue-200)
                 }
             }
+        }
+    }
+}
+.blockText {
+    background-color: $bg-300;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+}
+#Geometry {
+    .options-container.in-geometry {
+        @include option-links($green-200)
+    }
+    .geometry-item {
+        padding-bottom: 24px;
+        figure {
+            padding: 32px
+        }
+        form {
+            @include flexible(column, nowrap, center, center);
+            label {
+                @include flexible(column, nowrap, center, center);
+                gap: 16px;
+                span {
+                    font-size: 1.8rem;
+                }
+                input {
+                    @include inputs($green-300, $green-100)
+                }
+            }
+            button {
+                margin-block: 16px;
+                @include button-link($green-300)
+            }
+        }
+        article {
+            text-align: center;
+            padding: 24px 0;
+            p {
+                font-size: 2rem;
+                margin-bottom: 16px;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+        h5 {
+            @include arrow-texts()
+        }
+        .options-container.in-triangles {
+            @include option-links($green-200)
+        }
+    }
+}
+#Discounts {
+    .options-container.in-discounts {
+        @include option-links($purple-200)
+    }
+    label {
+        @include flexible(column, nowrap, center, center);
+        gap: 16px;
+        span {
+            font-size: 1.8rem;
+        }
+        input {
+            @include inputs($purple-300, $purple-100)
+        }
+    }
+    button {
+        margin-block: 16px;
+        @include button-link($purple-200)
+    }
+    .coupons-clues-container {
+        h5 {
+            @include titles(2rem)
+        }
+        .clues-instructions {
+            span {font-weight: 600; color: $purple-200;}
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+        ol {
+            padding: 0 8px 32px 16px;
+            li {
+                margin-bottom: 8px;
+                list-style: decimal;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+#Basic-statistics {
+    form {
+        label {
+            @include flexible(column, nowrap, center, center);
+            gap: 16px;
+            span {
+                font-size: 1.8rem;
+            }
+            textarea {
+                @include inputs($orange-300, $orange-100);
+                height: 160px;
+            }
+            button {
+                margin-block: 16px;
+                @include button-link($orange-200)
+            }
+        }
+    }
+    .statistics-explication-container {
+        .explication-data {
+            margin-top: 24px;
+            @include arrow-texts()
+        }
+    }
+    .statistics-results-container {
+        margin-block: 36px;
+        @include flexible(row, nowrap, space-between, center);
+        .result-item {
+            width: 60px;
+            @include flexible(column, nowrap, space-between, center);
+            font-size: 1.8rem;
+            gap: 8px;
+            .result {
+                @include flexible(row, nowrap, center, center);
+                background-color: $orange-200;
+                width: 100%;
+                height: 36px;
+                border-radius: 5px;
+            }
+        }
+    }
+    .statistics-explication-results-container {
+        .explication-item {
+            p:first-child {
+                @include arrow-texts();
+                margin-bottom: 24px;
+                background-color: $bg-100;
+            }
+            p:last-child {
+                background-color: $bg-100;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+#Salaries {
+    > p {
+        font-size: 1.4rem;
+        margin-bottom: 36px
+    }
+    .options-container.in-salaries {
+        @include option-links($red-200);
+        button {
+            @include button-link($red-200)
+        }
+    }
+    #Salaries-container {
+        background-color: $bg-200;
+        width: 100%;
+        padding: 24px 16px;
+        overflow-y: scroll;
+    
+        &::-webkit-scrollbar {width: 10px;}
+        &::-webkit-scrollbar-track {background: $bg-300;}
+        
+        &::-webkit-scrollbar-thumb {
+            background: $red-200;
+            border-radius: 5px;
+            height: 40px;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {background: $red-300;}
+    }
+    .salaries {
+        width: 100%;
+        height: 450px;
+    }
+    .companies-salaries {
+        display: grid;
+        gap: 24px;
+        .company-item {
+            h4 {@include titles(2rem)}
+            border: 2px solid $red-200;
+            .company-years--container {
+                @include flexible(column, nowrap, flex-start, flex-start);
+                .company-year {
+                    width: 100%;
+                    padding: 8px;
+                    &:nth-child(odd){
+                        background-color: $red-200;
+                    }
+                    @include flexible(row, nowrap, flex-start, flex-start);
+                    gap: 24px;
+                    h5 {font-size: 1.8rem; font-weight: 600;}
+                    .salaries-container {
+                        @include flexible(row, wrap, flex-start, flex-start);
+                        gap: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .employees-salaries {
+        display: grid;
+        gap: 24px;
+        .employee-details {
+            @include flexible(row, nowrap, space-between, center);
+            padding: 8px;
+            font-size: 2.4rem;
+            font-weight: 700;
+            .employee-id {color: $red-200;}
+        }
+        .employee-jobs--container {
+            @include flexible(row, nowrap, space-between, flex-start);
+            flex-grow: auto;
+            width: 100%;
+            font-size: 1.4rem;
+            border: 2px solid $red-200;
+            h5 {font-weight: 600; margin-block: 8px;}
+            > div {
+                padding-inline: 8px;
+                li {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+    h4 {@include titles(1.8rem)}
+    h3 {@include titles(2.4rem); margin-block: 48px;}
+    
+    .projection-container {
+        padding: 16px;
+        margin-bottom: 48px;
+        background-color: $bg-300;
+        div {
+            margin-bottom: 24px;
+            form {
+                @include flexible(row, nowrap, center, center);
+                gap: 24px;
+                label {
+                    @include flexible(column, nowrap, center, center);
+                    gap: 16px;
+                    span {
+                        font-size: 1.8rem
+                    }
+                    select {
+                        @include inputs($red-300, $red-100);
+                        width: auto;
+                    }
+                }
+            }
+            @include option-links($red-200);
+            button {
+                @include button-link($red-200);
+                &:hover {background-color: $bg-200}
+            }
+        }
+        article {
+            @include flexible(row, nowrap, center, center);
+            padding: 8px;
+            width: 100%;
+            height: 120px;
+            background-color: $bg-200;
+            border-radius: 12px;
+            text-align: center;
         }
     }
 }

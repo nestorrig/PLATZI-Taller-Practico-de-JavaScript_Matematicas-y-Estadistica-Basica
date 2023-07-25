@@ -28,7 +28,7 @@ function printCompanies(){
             let yearNumber = document.createElement('h5')
             let salariesContainer = document.createElement('ul')
             
-            yearContainer.className = 'companie-year'
+            yearContainer.className = 'company-year'
             yearNumber.className = 'year'
             salariesContainer.className = 'salaries-container'
 

@@ -54,7 +54,7 @@ function hideAndShowSection(references, sections) {
             break;
         case 'Salaries':
             header.style.backgroundColor = '#d90429'
-            menu.style.backgroundColor = '#ff98aa'
+            menu.style.backgroundColor = '#ff3e5e'
             break;
         default:
             break;
@@ -71,18 +71,3 @@ function showMenu() {
     }
     menu.classList.toggle('inactive')
 }
-// Colors
-const blue_100 = '#0085ff';
-const blue_200 = '#69b4ff';
-
-const orange_100 = '#FF6600';
-const orange_200 = '#ff983f';
-
-const purple_100 = '#8B5FBF';
-const purple_200 = '#61398F';
-
-const red_100 = '#d90429';
-const red_200 = '#ff98aa';
-
-const green_100 = '#006633';
-const green_200 = '#40955d';
