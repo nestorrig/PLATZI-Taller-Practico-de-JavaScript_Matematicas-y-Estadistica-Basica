@@ -47,14 +47,29 @@ $bg-300:#454545;
     box-shadow:  $eje $eje ($eje*2) #bebebe,
                 (-$eje) (-$eje) ($eje*2) #ffffff;
 }
+@mixin button-link($color){
+    @include flexible(row, nowrap, center, center);
+    width: 104px;
+    height: 40px;
+    font-size: 1.8rem;
+    background-color: $color;
+    color: $text-100;
+    border-radius: 12px;
+    border: 2px solid $color;
+    &:hover {
+        background-color: $bg-300;
+        transition: background-color .3s;
+    }
+    &:active {
+        transform: scale(.9);
+    }
+}
 
 body {
     font-family: 'Noto Sans', sans-serif;
     background-color: $bg-100;
     color: $text-100;
 }
-// h1 { font-size: 3rem;}
-
 
 header {
     width: 100%;
@@ -66,7 +81,7 @@ nav {
     width: 100%;
     padding: 16px 8px;
     @include flexible(row, nowrap, space-between, center);
-    p {font-size: 2rem;}
+    p {font-size: 2.4rem;}
 
     .mobile-menu {
         position: absolute;
@@ -82,10 +97,55 @@ nav {
         @include flexible(column, nowrap, center, center);
         gap: 24px;
         a {
-            font-size: 1.4rem;
+            font-size: 2rem;
             &:hover {
                 text-decoration: underline;
                 font-weight: 700;
+            }
+        }
+    }
+}
+main {
+    width: 100%;
+    .section-item {
+        width: 100%;
+        max-width: 1300px;
+        padding: 0 16px;
+    }
+}
+#Home {
+    h1 {
+        margin: 24px 0;
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .calculators-container {
+        width: 100%;
+        padding-bottom: 48px;
+        display: grid;
+        gap: 36px;
+        .calculator--item {
+            background-color: $bg-200;
+            padding: 24px 24px 0;
+            figure {
+                background-color: $bg-300;
+                width: 100%;
+                height: auto;
+                padding: 32px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            article{
+                @include flexible(row, nowrap, space-between, center);
+                padding: 16px 4px;
+                h4 {font-size: 2rem; font-weight: 500;}
+                .section-link {
+                    @include button-link($blue-200)
+                }
             }
         }
     }

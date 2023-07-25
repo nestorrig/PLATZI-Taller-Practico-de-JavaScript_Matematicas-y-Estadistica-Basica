@@ -79,6 +79,7 @@ li {
     /* Configuramos anclas suaves */
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
     /* Desactivamos estilos por defecto de las principales etiquetas de texto */
@@ -143,7 +144,6 @@ svg {
     /* Configuramos la tipografía para toda la web */
 body {
     min-height: 100vh;
-    font-size: 62.5%;
     font-family: var(--tipo-principal);
     color: var(--negro);
     /* opcional */
