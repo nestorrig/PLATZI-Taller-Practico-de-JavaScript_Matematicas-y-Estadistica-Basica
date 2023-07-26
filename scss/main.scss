@@ -13,7 +13,7 @@ $red-200:#ff3e5e;
 $red-300:#fdf6fd;
 $green-100:#006633;
 $green-200:#40955d;
-$green-300:#a3f9bb;
+$green-300:#86faa7;
 $text-100:#FFFFFF;
 $text-200:#9e9e9e;
 $bg-100:#1E1E1E;
@@ -26,16 +26,10 @@ $bg-300:#454545;
     justify-content : $just;
     align-items     : $align;
 }
-@mixin mv( $medida : 480px ){
-    @media screen and (max-width: $medida ) {
+@mixin responsive( $medida : 480px ){
+    @media screen and (min-width: $medida ) {
         @content;
     }
-}
-@mixin neo( $radius , $eje ){
-    border-radius: $radius;
-    background: #e0e0e0;
-    box-shadow:  $eje $eje ($eje*2) #bebebe,
-                (-$eje) (-$eje) ($eje*2) #ffffff;
 }
 @mixin button-link($color){
     @include flexible(row, nowrap, center, center);
@@ -48,11 +42,15 @@ $bg-300:#454545;
     border-radius: 12px;
     border: 2px solid $color;
     &:hover {
-        transition: all .3s;
         background-color: $bg-300;
+        transition: all .3s;
+    }
+    &:focus {
+        outline: 2px solid $text-100;
     }
     &:active {
         transform: scale(.9);
+        color: $color;
     }
 }
 @mixin titles ($font-weight){
@@ -133,6 +131,7 @@ main {
         width: 100%;
         max-width: 1300px;
         padding: 0 16px;
+        margin: 0 auto;
     }
 }
 h2 {
@@ -145,15 +144,21 @@ h3 {
 #Home {
     h1 {
         @include titles(2.4rem);
+        margin-block: 48px;
     }
     .calculators-container {
         width: 100%;
         padding-bottom: 48px;
-        display: grid;
+        @include flexible(row, wrap, center, center);
         gap: 36px;
         .calculator--item {
             background-color: $bg-200;
             padding: 24px;
+            width: 100%;
+            max-width: 320px;
+            @include responsive(1300px){
+                width: 280px;
+            }
             figure {
                 background-color: $bg-300;
                 width: 100%;
@@ -182,8 +187,21 @@ h3 {
     }
     .geometry-item {
         padding-bottom: 24px;
+        .form-geometry-container {
+            @include flexible(row, wrap, center, center)
+        }
+        .form-container {
+            @include responsive(680px){
+                padding-right: 64px;
+            }
+            @include responsive(1100px){
+                @include flexible(row, nowrap, center, center);
+                gap: 36px;
+            }
+        }
         figure {
-            padding: 32px
+            padding: 32px;
+            max-width: 360px
         }
         form {
             @include flexible(column, nowrap, center, center);
@@ -236,10 +254,23 @@ h3 {
         }
     }
     button {
-        margin-block: 16px;
+        margin-top: 16px;
         @include button-link($purple-200)
     }
+    #couponResult,
+    #percentageResult {
+        @include flexible(row, nowrap, center, center);
+        margin: 0 auto;
+        margin-block: 24px;
+        width: 100%;
+        max-width: 600px;
+        min-height: 64px;
+        padding: 24px;
+        background-color: $bg-200;
+    }
     .coupons-clues-container {
+        margin: 0 auto;
+        max-width: 900px;
         h5 {
             @include titles(2rem)
         }
@@ -247,6 +278,12 @@ h3 {
             span {font-weight: 600; color: $purple-200;}
             font-size: 1.8rem;
             margin-bottom: 24px;
+        }
+        @include responsive(800px) {
+            ol {
+                @include flexible(row, wrap, space-between, flex-start);
+                div {width: 45%;}
+            }
         }
         ol {
             padding: 0 8px 32px 16px;
@@ -279,27 +316,49 @@ h3 {
     .statistics-explication-container {
         .explication-data {
             margin-top: 24px;
-            @include arrow-texts()
+            @include arrow-texts();
+            & + p {
+                margin-bottom: 24px;
+            }
         }
     }
     .statistics-results-container {
         margin-block: 36px;
-        @include flexible(row, nowrap, space-between, center);
+        @include flexible(row, wrap, center, center);
+        gap: 36px;
         .result-item {
-            width: 60px;
+            width: 40%;
+            max-width: 200px;
             @include flexible(column, nowrap, space-between, center);
             font-size: 1.8rem;
             gap: 8px;
             .result {
                 @include flexible(row, nowrap, center, center);
-                background-color: $orange-200;
+                background-color: $bg-200;
                 width: 100%;
                 height: 36px;
                 border-radius: 5px;
             }
+            #Mode-result {
+                overflow: scroll;
+                &::-webkit-scrollbar {height: 4px; width: 0;}
+                &::-webkit-scrollbar-track {background: $bg-300;}
+                
+                &::-webkit-scrollbar-thumb {
+                    background: $orange-200;
+                    border-radius: 5px;
+                    width: 10px;
+                }
+                &::-webkit-scrollbar-thumb:hover {background: $orange-100;}
+            }
         }
     }
     .statistics-explication-results-container {
+        @include responsive(700px) {
+            @include flexible(row, wrap, center, flex-start);
+            gap: 24px;
+            .explication-item {width: 45%;}
+        }
         .explication-item {
             p:first-child {
                 @include arrow-texts();
@@ -315,7 +374,6 @@ h3 {
 }
 #Salaries {
     > p {
-        font-size: 1.4rem;
         margin-bottom: 36px
     }
     .options-container.in-salaries {
@@ -327,7 +385,9 @@ h3 {
     #Salaries-container {
         background-color: $bg-200;
         width: 100%;
+        max-width: 1200px;
         padding: 24px 16px;
+        margin: 0 auto;
         overflow-y: scroll;
     
         &::-webkit-scrollbar {width: 10px;}
@@ -343,21 +403,31 @@ h3 {
     }
     .salaries {
         width: 100%;
-        height: 450px;
+        height: 240px;
+        > div {margin-bottom: 24px}
+        @include responsive(700px){
+            @include flexible(row, wrap, center, flex-start);
+            .company-item, 
+            .employee-item {width: 45%;}
+        }
+        @include responsive(1000px){
+            @include flexible(row, wrap, center, flex-start);
+            .employee-item {width: 30%;}
+        }
+        
     }
     .companies-salaries {
-        display: grid;
         gap: 24px;
         .company-item {
-            h4 {@include titles(2rem)}
-            border: 2px solid $red-200;
+            h4 {@include titles(2rem); color: $red-200;}
+            border: 2px solid $bg-300;
             .company-years--container {
                 @include flexible(column, nowrap, flex-start, flex-start);
                 .company-year {
                     width: 100%;
                     padding: 8px;
                     &:nth-child(odd){
-                        background-color: $red-200;
+                        background-color: $bg-300;
                     }
                     @include flexible(row, nowrap, flex-start, flex-start);
                     gap: 24px;
@@ -371,7 +441,6 @@ h3 {
         }
     }
     .employees-salaries {
-        display: grid;
         gap: 24px;
         .employee-details {
             @include flexible(row, nowrap, space-between, center);
@@ -385,7 +454,7 @@ h3 {
             flex-grow: auto;
             width: 100%;
             font-size: 1.4rem;
-            border: 2px solid $red-200;
+            border: 2px solid $bg-300;
             h5 {font-weight: 600; margin-block: 8px;}
             > div {
                 padding-inline: 8px;
@@ -398,6 +467,13 @@ h3 {
     h4 {@include titles(1.8rem)}
     h3 {@include titles(2.4rem); margin-block: 48px;}
     
+    .projections-container {
+        @include responsive(700px) {
+            @include flexible(row, nowrap, center, center);
+            gap: 24px;
+            .projection-container {width: 45%;}
+        }
+    }
     .projection-container {
         padding: 16px;
         margin-bottom: 48px;

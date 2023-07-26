@@ -41,7 +41,7 @@ function printCompanies(){
             salariesList.forEach(salary => {
                 let salaryItem = document.createElement('li')
                 salaryItem.className = 'salary'
-                salaryItem.innerText = salary
+                salaryItem.innerText = `$${salary}`
 
                 salariesContainer.append(salaryItem)
             });
@@ -73,7 +73,7 @@ function printEmployees() {
         employeeName.className = 'employee-name'
         employeeId.className = 'employee-id'
         employeeName.innerText = salary.name
-        employeeId.innerText = salary.id
+        employeeId.innerText = `ID: ${salary.id}`
 
         let employeeJobs = document.createElement('div');
         employeeJobs.className = 'employee-jobs--container'
@@ -107,7 +107,7 @@ function printEmployees() {
 
             employeeCompanie.innerText = job.company
             employeeYear.innerText = job.year
-            employeeSalary.innerText = job.salary
+            employeeSalary.innerText = `$${job.salary}`
 
             employeeYearList.append(employeeYear)
             employeeCompanyList.append(employeeCompanie)

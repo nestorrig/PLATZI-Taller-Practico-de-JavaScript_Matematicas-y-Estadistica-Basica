@@ -1,5 +1,6 @@
 const selectMedianItem = document.getElementById('Median--options');
 const selectMedianYear = document.getElementById('Median--years');
+const spanMedianYear = document.getElementById('label--years');
 const buttonMedian = document.getElementById('Median-salary--button');
 const resultMedianSalary = document.getElementById('Median-salary-result');
 
@@ -37,6 +38,7 @@ function printProjectionsCompanies(selectTag) {
     }
     
     selectMedianYear.style.display = 'inline-block'
+    spanMedianYear.style.display = 'inline-block'
     printYearsCompanies()
 
     resultMedianSalary.innerText = ''
@@ -83,9 +85,16 @@ function medianCompanies() {
             year = option.value
         }
     }
-    console.log([company, year]);
+    // console.log([company, year]);
     result = medianSalariesPerCompanieAndYear(company, year)
+    console.log(result);
+    if (result === undefined) {
+        resultMedianSalary.innerText = `The company ${company} did not give salaries that year`
+        resultMedianSalary.classList.add('error')
+        return
+    }
     resultMedianSalary.innerText = `The median salary of the company ${company} in ${year} was $${result}`
+    resultMedianSalary.classList.remove('error')
 }
 function projectionCompanies() {
     let company;
@@ -97,7 +106,7 @@ function projectionCompanies() {
         }
     }
     console.log([company]);
-    result = projectionPerCompanie(company)
+    result = projectionPerCompanie(company);
     resultProjection.innerText = `The median projected salary for the year 2024 of the company ${company} is $${result}`
 }
 //EMPLOYEES
@@ -125,6 +134,7 @@ function printProjectionsEmployees(selectTag) {
     }
 
     selectMedianYear.style.display = 'none'
+    spanMedianYear.style.display = 'none'
 
     resultMedianSalary.innerText = ''
     resultProjection.innerText = ''

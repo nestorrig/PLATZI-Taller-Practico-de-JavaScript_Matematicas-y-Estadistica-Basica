@@ -1,14 +1,4 @@
     @charset "UTF-8";
-    /*
-
-    Con este reset vamos a resolver:
-        👉 Unificar el uso de Custom Properties
-        👉 Problemas de box-model más generales
-        👉 Problemas con imagenes, vídeos e iconos svg
-        👉 Problemas con tipografías y etiquetas input en formularios
-        👉 Unificar la tipografía de todas las etiquetas de una web
-
-    */
     /* Aquí definimos las Custom properties */
 :root {
     --negro: #393939;
@@ -17,24 +7,6 @@
     --tipo-secundaria: Verdana;
 }
 
-    /* Las adaptamos al modo oscuro */
-/* @media (prefers-color-scheme: dark) {
-:root {
-        --negro: #ececec;
-}
-} */
-    /* Opcional */
-    /* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-    /* Opcional */
-    /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
-@media (prefers-reduced-motion: reduce) {
-* {
-        -webkit-animation: none !important;
-                animation: none !important;
-        -webkit-transition: none !important;
-        transition: none !important;
-}
-}
     /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
     margin: 0;
@@ -76,7 +48,7 @@ li {
     list-style-type: none;
 }
 
-    /* Configuramos anclas suaves */
+    /* Configuramos anclas suaves y font-size */
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;

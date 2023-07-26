@@ -116,25 +116,27 @@
                 <h3>
                     Perimeter and Area of a square
                 </h3>
-                <figure>
-                    <img src="./img/square.svg" alt="Square image">
-                </figure>
-                <div class="form-container is-square">
-                    <form>
-                        <label for="side-square">
-                            <span>Side length</span>
-                            <input type="number" min="1" step="0.01" id="side-square" placeholder="15">
-                        </label>
-                        <button type="button" id="calculate-square">Calculate</button>
-                    </form>
-                    <article>
-                        <p>
-                            Perimeter = <span id="square-perimeter"></span>
-                        </p>
-                        <p>
-                            Area = <span id="square-area"></span>
-                        </p>
-                    </article>
+                <div class="form-geometry-container">
+                    <figure>
+                        <img src="./img/square.svg" alt="Square image">
+                    </figure>
+                    <div class="form-container is-square">
+                        <form>
+                            <label for="side-square">
+                                <span>Side length</span>
+                                <input type="number" min="1" step="0.01" id="side-square" placeholder="15">
+                            </label>
+                            <button type="button" id="calculate-square">Calculate</button>
+                        </form>
+                        <article>
+                            <p>
+                                Perimeter = <span id="square-perimeter"></span>
+                            </p>
+                            <p>
+                                Area = <span id="square-area"></span>
+                            </p>
+                        </article>
+                    </div>
                 </div>
             </article>
             <article id="Triangle" class="geometry-item inactive">
@@ -142,36 +144,35 @@
                         <h3>
                             Perimeter and Area of a triangle
                         </h3>
-                        <figure>
-                            <img src="./img/triangle.svg" alt="Triangle image">
-                        </figure>
-                        <div class="form-container is-triangle">
-                            <form>
-                                <label for="side1-triangle">
-                                    <span>Side 1</span>
-                                    <input type="number" min="1" step="0.01" id="side1-triangle" placeholder="15">
-                                </label>
-                                <label for="side2-triangle">
-                                    <span>Side 2</span>
-                                    <input type="number" min="1" step="0.01" id="side2-triangle" placeholder="15">
-                                </label>
-                                <label for="side3-triangle">
-                                    <span>Side 3</span>
-                                    <input type="number" min="1" step="0.01" id="side3-triangle" placeholder="15">
-                                </label>
-                                <button type="button" id="calculate-triangle">Calculate</button>
-                                <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
-                                    event.preventDefault()
-                                }); -->
-                            </form>
-                            <article>
-                                <p>
-                                    Perimeter = <span id="triangle-perimeter"></span>
-                                </p>
-                                <p>
-                                    Area = <span id="triangle-area"></span>
-                                </p>
-                            </article>
+                        <div class="form-geometry-container">
+                            <figure>
+                                <img src="./img/triangle.svg" alt="Triangle image">
+                            </figure>
+                            <div class="form-container is-triangle">
+                                <form>
+                                    <label for="side1-triangle">
+                                        <span>Side 1</span>
+                                        <input type="number" min="1" step="0.01" id="side1-triangle" placeholder="15">
+                                    </label>
+                                    <label for="side2-triangle">
+                                        <span>Side 2</span>
+                                        <input type="number" min="1" step="0.01" id="side2-triangle" placeholder="15">
+                                    </label>
+                                    <label for="side3-triangle">
+                                        <span>Side 3</span>
+                                        <input type="number" min="1" step="0.01" id="side3-triangle" placeholder="15">
+                                    </label>
+                                    <button type="button" id="calculate-triangle">Calculate</button>
+                                </form>
+                                <article>
+                                    <p>
+                                        Perimeter = <span id="triangle-perimeter"></span>
+                                    </p>
+                                    <p>
+                                        Area = <span id="triangle-area"></span>
+                                    </p>
+                                </article>
+                            </div>
                         </div>
                 </article>
                 <h5>
@@ -192,68 +193,68 @@
                             <h3>
                                 Height of a scalene triangle
                             </h3>
-                            <figure>
-                                <img src="img/Scalene_triangle.svg" alt="Scalene triangle image">
-                            </figure>
-                            <div class="form-container is-scalene">
-                                <form>
-                                    <label for="side1-scalene-triangle">
-                                        <span>Side 1</span>
-                                        <input type="number" min="1" step="0.01" id="side1-scalene-triangle" placeholder="15">
-                                    </label>
-                                    <label for="side2-scalene-triangle">
-                                        <span>Side 2</span>
-                                        <input type="number" min="1" step="0.01" id="side2-scalene-triangle" placeholder="15">
-                                    </label>
-                                    <label for="side3-scalene-triangle">
-                                        <span>Side 3</span>
-                                        <input type="number" min="1" step="0.01" id="side3-scalene-triangle" placeholder="15">
-                                    </label>
-                                    <button type="button" id="calculate-scalene">Calculate</button>
-                                    <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
-                                        event.preventDefault()
-                                    }); -->
-                                </form>
-                                <article>
-                                    <p>
-                                        Height 1 = <span id="scalene-height1"></span>
-                                    </p>
-                                    <p>
-                                        Height 2 = <span id="scalene-height2"></span>
-                                    </p>
-                                    <p>
-                                        Height 3 = <span id="scalene-height3"></span>
-                                    </p>
-                                </article>
+                            
+                            <div class="form-geometry-container">
+                                <figure>
+                                    <img src="img/Scalene_triangle.svg" alt="Scalene triangle image">
+                                </figure>
+                                <div class="form-container is-scalene">
+                                    <form>
+                                        <label for="side1-scalene-triangle">
+                                            <span>Side 1</span>
+                                            <input type="number" min="1" step="0.01" id="side1-scalene-triangle" placeholder="15">
+                                        </label>
+                                        <label for="side2-scalene-triangle">
+                                            <span>Side 2</span>
+                                            <input type="number" min="1" step="0.01" id="side2-scalene-triangle" placeholder="15">
+                                        </label>
+                                        <label for="side3-scalene-triangle">
+                                            <span>Side 3</span>
+                                            <input type="number" min="1" step="0.01" id="side3-scalene-triangle" placeholder="15">
+                                        </label>
+                                        <button type="button" id="calculate-scalene">Calculate</button>
+                                    </form>
+                                    <article>
+                                        <p>
+                                            Height 1 = <span id="scalene-height1"></span>
+                                        </p>
+                                        <p>
+                                            Height 2 = <span id="scalene-height2"></span>
+                                        </p>
+                                        <p>
+                                            Height 3 = <span id="scalene-height3"></span>
+                                        </p>
+                                    </article>
+                                </div>
                             </div>
                         </article>
                         <article id="Isosceles" class="inactive triangle--item triangle-item is-isosceles">
                             <h3>
                                 Height of a isosceles triangle
                             </h3>
-                            <figure>
-                                <img src="./img/isosceles.svg" alt="Isosceles triangle image">
-                            </figure>
-                            <div class="form-container is-isosceles">
-                                <form>
-                                    <label for="side-isosceles-triangle">
-                                        <span>One side</span>
-                                        <input type="number" min="1" step="0.01" id="side-isosceles-triangle" placeholder="15">
-                                    </label>
-                                    <label for="base-isosceles-triangle">
-                                        <span>Base</span>
-                                        <input type="number" min="1" step="0.01" id="base-isosceles-triangle" placeholder="15">
-                                    </label>
-                                    <button type="button" id="calculate-isosceles">Calculate</button>
-                                    <!-- document.getElementById("myAnchor").addEventListener("click", function(event){
-                                        event.preventDefault()
-                                    }); -->
-                                </form>
-                                <article>
-                                    <p>
-                                        Height = <span id="isosceles-height"></span>
-                                    </p>
-                                </article>
+                            
+                            <div class="form-geometry-container">
+                                <figure>
+                                    <img src="./img/isosceles.svg" alt="Isosceles triangle image">
+                                </figure>
+                                <div class="form-container is-isosceles">
+                                    <form>
+                                        <label for="side-isosceles-triangle">
+                                            <span>One side</span>
+                                            <input type="number" min="1" step="0.01" id="side-isosceles-triangle" placeholder="15">
+                                        </label>
+                                        <label for="base-isosceles-triangle">
+                                            <span>Base</span>
+                                            <input type="number" min="1" step="0.01" id="base-isosceles-triangle" placeholder="15">
+                                        </label>
+                                        <button type="button" id="calculate-isosceles">Calculate</button>
+                                    </form>
+                                    <article>
+                                        <p>
+                                            Height = <span id="isosceles-height"></span>
+                                        </p>
+                                    </article>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -263,25 +264,27 @@
                 <h3>
                     Perimeter and Area of a circle
                 </h3>
-                <figure>
-                    <img src="./img/circle.svg" alt="Circle image">
-                </figure>
-                <div class="form-container is-circle">
-                    <form>
-                        <label for="radio-circle">
-                            <span>Radio</span>
-                            <input type="number" min="1" step="0.01" id="radio-circle" placeholder="3.14">
-                        </label>
-                        <button type="button" id="calculate-circle">Calculate</button>
-                    </form>
-                    <article>
-                        <p>
-                            Perimeter = <span id="circle-perimeter"></span>
-                        </p>
-                        <p>
-                            Area = <span id="circle-area"></span>
-                        </p>
-                    </article>
+                <div class="form-geometry-container">
+                    <figure>
+                        <img src="./img/circle.svg" alt="Circle image">
+                    </figure>
+                    <div class="form-container is-circle">
+                        <form>
+                            <label for="radio-circle">
+                                <span>Radio</span>
+                                <input type="number" min="1" step="0.01" id="radio-circle" placeholder="3.14">
+                            </label>
+                            <button type="button" id="calculate-circle">Calculate</button>
+                        </form>
+                        <article>
+                            <p>
+                                Perimeter = <span id="circle-perimeter"></span>
+                            </p>
+                            <p>
+                                Area = <span id="circle-area"></span>
+                            </p>
+                        </article>
+                    </div>
                 </div>
             </article>
         </section>
@@ -314,7 +317,7 @@
                     </article>
                     <article class="discount-container  is-byCoupon inactive" id="Coupons">
                         <label for="coupon-discount">
-                            <span>Insert cuopon</span>
+                            <span>Insert coupon</span>
                             <input type="text" autocapitalize="none" id="coupon-discount">
                             <button type="button" id="coupon-button">Calculate</button>
                         </label>
@@ -328,36 +331,40 @@
                                 The following questions can be answered with a single word. Write your answer in lowercase. If your answer is correct, the question will turn <span>purple</span>, and you will receive your discount. Otherwise, your answer will be rejected.
                             </p>
                             <ol>
-                                <li class="clue-item">
-                                    Which programming language is widely used for web application development?
-                                </li>
-                                <li class="clue-item">
-                                    What is the process of identifying and fixing software errors?
-                                </li>
-                                <li class="clue-item">
-                                    What is the process of converting source code into an executable program?
-                                </li>
-                                <li class="clue-item">
-                                    What process verifies the functionality of software before its release?
-                                </li>
-                                <li class="clue-item">
-                                    What data structure does an algorithm use to organize elements in a hierarchical manner?
-                                </li>
-                                <li class="clue-item">
-                                    What is the process of converting a visual design into functional code?
-                                </li>
-                                <li class="clue-item">
-                                    What is the process of adapting existing software to a different environment or platform?
-                                </li>
-                                <li class="clue-item">
-                                    What is a set of predefined instructions used to perform a specific task in a program?
-                                </li>
-                                <li class="clue-item">
-                                    What is the process of breaking down a large software project into smaller, manageable components?
-                                </li>
-                                <li class="clue-item">
-                                    What is a technique used to identify and remove redundant or unnecessary code in a software program?
-                                </li>
+                                <div>
+                                    <li class="clue-item">
+                                        Which programming language is widely used for web application development?
+                                    </li>
+                                    <li class="clue-item">
+                                        What is the process of identifying and fixing software errors?
+                                    </li>
+                                    <li class="clue-item">
+                                        What is the process of converting source code into an executable program?
+                                    </li>
+                                    <li class="clue-item">
+                                        What process verifies the functionality of software before its release?
+                                    </li>
+                                    <li class="clue-item">
+                                        What data structure does an algorithm use to organize elements in a hierarchical manner?
+                                    </li>
+                                </div>
+                                <div>
+                                    <li class="clue-item">
+                                        What is the process of converting a visual design into functional code?
+                                    </li>
+                                    <li class="clue-item">
+                                        What is the process of adapting existing software to a different environment or platform?
+                                    </li>
+                                    <li class="clue-item">
+                                        What is a set of predefined instructions used to perform a specific task in a program?
+                                    </li>
+                                    <li class="clue-item">
+                                        What is the process of breaking down a large software project into smaller, manageable components?
+                                    </li>
+                                    <li class="clue-item">
+                                        What is a technique used to identify and remove redundant or unnecessary code in a software program?
+                                    </li>
+                                </div>
                             </ol>
                         </div>
                     </article>
@@ -370,8 +377,7 @@
             <form>
                 <label for="number-list-input">
                     <span>Insert number list</span>
-                    <!-- <input type="text" id="number-list-input" placeholder="13, 45, 89, 8, 66, 44"> -->
-                    <textarea name="" id="number-list-input" cols="30" rows="5" placeholder="13, 45, 89, 8, 66, 44"></textarea>
+                    <textarea name="" id="number-list-input" cols="30" rows="5" placeholder="13, 45, 89, 8, 66, 44">7, 9, 6, 6, 5, 10, 8, 6, 5, 7, 5, 6, 8, 9, 5, 7, 10, 9, 8, 5, 6, 7, 8, 5, 9, 10, 10, 7, 8, 6</textarea>
                     <button type="button" id="basic-statistics-button">Calculate</button>
                 </label>
             </form>
@@ -468,8 +474,8 @@
             <h3>Projections</h3>
             <section class="projections-container" id="Projections-container">
 
-                <h4>Median salary <span id="median-salary-title">per year</span></h4>
                 <div id="Median-salary--container" class="media-per-year projection-container">
+                    <h4>Median salary <span id="median-salary-title">per year</span></h4>
                     <div>
                         <form id="Median-salary--form">
                             <label for="Median--options">
@@ -478,7 +484,7 @@
                                 <select name="" id="Median--options" class="options-select"></select>
                             </label>
                             <label for="Median--years">
-                                <span>Year</span>
+                                <span id="label--years">Year</span>
                                 <select name="year" id="Median--years"></select>
                             </label>
                         </form>
@@ -489,8 +495,8 @@
                     </article>
                 </div>
 
-                <h4>Median salary projection</h4>
                 <div id="Projection-salary--container" class="projection-salary projection-container">
+                    <h4>Median salary projection</h4>
                     <div>
                         <form id="Projection-salary--form">
                             <label for="Projection--options">

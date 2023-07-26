@@ -25,7 +25,7 @@ function printResults(list) {
     messageUser.innerText = 'These are the results:'
     messageUser.classList.remove('error')
 
-    resultMean.innerText = PlatziMath.average(list);
+    resultMean.innerText = PlatziMath.average(list).toFixed(5);
     resultMedian.innerText = PlatziMath.mediana(list);
     resultMode.innerText = PlatziMath.mode(list);
     resultRange.innerText = PlatziMath.range(list);

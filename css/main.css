@@ -73,6 +73,7 @@ main .section-item {
   width: 100%;
   max-width: 1300px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -94,17 +95,36 @@ h3 {
   font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
+  margin-block: 48px;
 }
 #Home .calculators-container {
   width: 100%;
   padding-bottom: 48px;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 36px;
 }
 #Home .calculators-container .calculator--item {
   background-color: #2d2d2d;
   padding: 24px;
+  width: 100%;
+  max-width: 320px;
+}
+@media screen and (min-width: 1300px) {
+  #Home .calculators-container .calculator--item {
+    width: 280px;
+  }
 }
 #Home .calculators-container .calculator--item figure {
   background-color: #454545;
@@ -156,13 +176,17 @@ h3 {
   border: 2px solid #69b4ff;
 }
 #Home .calculators-container .calculator--item article .section-link:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Home .calculators-container .calculator--item article .section-link:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Home .calculators-container .calculator--item article .section-link:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #69b4ff;
 }
 
 .blockText {
@@ -211,19 +235,62 @@ h3 {
   border: 2px solid #40955d;
 }
 #Geometry .options-container.in-geometry a:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Geometry .options-container.in-geometry a:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Geometry .options-container.in-geometry a:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #40955d;
 }
 #Geometry .geometry-item {
   padding-bottom: 24px;
 }
+#Geometry .geometry-item .form-geometry-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 680px) {
+  #Geometry .geometry-item .form-container {
+    padding-right: 64px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #Geometry .geometry-item .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 36px;
+  }
+}
 #Geometry .geometry-item figure {
   padding: 32px;
+  max-width: 360px;
 }
 #Geometry .geometry-item form {
   display: -webkit-box;
@@ -261,7 +328,7 @@ h3 {
 }
 #Geometry .geometry-item form label input {
   background-color: #2d2d2d;
-  border-bottom: 3px solid #a3f9bb;
+  border-bottom: 3px solid #86faa7;
   padding: 8px 16px;
   margin-bottom: 16px;
 }
@@ -288,19 +355,23 @@ h3 {
   height: auto;
   padding: 8px 24px;
   font-size: 1.8rem;
-  background-color: #a3f9bb;
+  background-color: #86faa7;
   color: #FFFFFF;
   border-radius: 12px;
-  border: 2px solid #a3f9bb;
+  border: 2px solid #86faa7;
 }
 #Geometry .geometry-item form button:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Geometry .geometry-item form button:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Geometry .geometry-item form button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #86faa7;
 }
 #Geometry .geometry-item article {
   text-align: center;
@@ -372,13 +443,17 @@ h3 {
   border: 2px solid #40955d;
 }
 #Geometry .geometry-item .options-container.in-triangles a:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Geometry .geometry-item .options-container.in-triangles a:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Geometry .geometry-item .options-container.in-triangles a:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #40955d;
 }
 
 #Discounts .options-container.in-discounts {
@@ -421,13 +496,17 @@ h3 {
   border: 2px solid #8B5FBF;
 }
 #Discounts .options-container.in-discounts a:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Discounts .options-container.in-discounts a:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Discounts .options-container.in-discounts a:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #8B5FBF;
 }
 #Discounts label {
   display: -webkit-box;
@@ -459,7 +538,7 @@ h3 {
   border-color: #61398F;
 }
 #Discounts button {
-  margin-block: 16px;
+  margin-top: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,13 +562,44 @@ h3 {
   border: 2px solid #8B5FBF;
 }
 #Discounts button:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Discounts button:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Discounts button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #8B5FBF;
+}
+#Discounts #couponResult,
+#Discounts #percentageResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-block: 24px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 64px;
+  padding: 24px;
+  background-color: #2d2d2d;
+}
+#Discounts .coupons-clues-container {
+  margin: 0 auto;
+  max-width: 900px;
 }
 #Discounts .coupons-clues-container h5 {
   margin: 24px 0;
@@ -504,6 +614,26 @@ h3 {
 #Discounts .coupons-clues-container .clues-instructions span {
   font-weight: 600;
   color: #8B5FBF;
+}
+@media screen and (min-width: 800px) {
+  #Discounts .coupons-clues-container ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #Discounts .coupons-clues-container ol div {
+    width: 45%;
+  }
 }
 #Discounts .coupons-clues-container ol {
   padding: 0 8px 32px 16px;
@@ -569,13 +699,17 @@ h3 {
   border: 2px solid #ff983f;
 }
 #Basic-statistics form label button:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Basic-statistics form label button:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Basic-statistics form label button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #ff983f;
 }
 #Basic-statistics .statistics-explication-container .explication-data {
   margin-top: 24px;
@@ -597,6 +731,9 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
 }
+#Basic-statistics .statistics-explication-container .explication-data + p {
+  margin-bottom: 24px;
+}
 #Basic-statistics .statistics-results-container {
   margin-block: 36px;
   display: -webkit-box;
@@ -604,17 +741,19 @@ h3 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 36px;
 }
 #Basic-statistics .statistics-results-container .result-item {
-  width: 60px;
+  width: 40%;
+  max-width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,10 +784,49 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ff983f;
+  background-color: #2d2d2d;
   width: 100%;
   height: 36px;
   border-radius: 5px;
+}
+#Basic-statistics .statistics-results-container .result-item #Mode-result {
+  overflow: scroll;
+}
+#Basic-statistics .statistics-results-container .result-item #Mode-result::-webkit-scrollbar {
+  height: 4px;
+  width: 0;
+}
+#Basic-statistics .statistics-results-container .result-item #Mode-result::-webkit-scrollbar-track {
+  background: #454545;
+}
+#Basic-statistics .statistics-results-container .result-item #Mode-result::-webkit-scrollbar-thumb {
+  background: #ff983f;
+  border-radius: 5px;
+  width: 10px;
+}
+#Basic-statistics .statistics-results-container .result-item #Mode-result::-webkit-scrollbar-thumb:hover {
+  background: #FF6600;
+}
+@media screen and (min-width: 700px) {
+  #Basic-statistics .statistics-explication-results-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 24px;
+  }
+  #Basic-statistics .statistics-explication-results-container .explication-item {
+    width: 45%;
+  }
 }
 #Basic-statistics .statistics-explication-results-container .explication-item p:first-child {
   margin-bottom: 16px;
@@ -677,7 +855,6 @@ h3 {
 }
 
 #Salaries > p {
-  font-size: 1.4rem;
   margin-bottom: 36px;
 }
 #Salaries .options-container.in-salaries {
@@ -720,13 +897,17 @@ h3 {
   border: 2px solid #ff3e5e;
 }
 #Salaries .options-container.in-salaries a:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Salaries .options-container.in-salaries a:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Salaries .options-container.in-salaries a:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #ff3e5e;
 }
 #Salaries .options-container.in-salaries button {
   display: -webkit-box;
@@ -752,18 +933,24 @@ h3 {
   border: 2px solid #ff3e5e;
 }
 #Salaries .options-container.in-salaries button:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Salaries .options-container.in-salaries button:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Salaries .options-container.in-salaries button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #ff3e5e;
 }
 #Salaries #Salaries-container {
   background-color: #2d2d2d;
   width: 100%;
+  max-width: 1200px;
   padding: 24px 16px;
+  margin: 0 auto;
   overflow-y: scroll;
 }
 #Salaries #Salaries-container::-webkit-scrollbar {
@@ -782,21 +969,64 @@ h3 {
 }
 #Salaries .salaries {
   width: 100%;
-  height: 450px;
+  height: 240px;
+}
+#Salaries .salaries > div {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 700px) {
+  #Salaries .salaries {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #Salaries .salaries .company-item,
+  #Salaries .salaries .employee-item {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #Salaries .salaries {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #Salaries .salaries .employee-item {
+    width: 30%;
+  }
 }
 #Salaries .companies-salaries {
-  display: -ms-grid;
-  display: grid;
   gap: 24px;
 }
 #Salaries .companies-salaries .company-item {
-  border: 2px solid #ff3e5e;
+  border: 2px solid #454545;
 }
 #Salaries .companies-salaries .company-item h4 {
   margin: 24px 0;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
+  color: #ff3e5e;
 }
 #Salaries .companies-salaries .company-item .company-years--container {
   display: -webkit-box;
@@ -832,7 +1062,7 @@ h3 {
   gap: 24px;
 }
 #Salaries .companies-salaries .company-item .company-years--container .company-year:nth-child(odd) {
-  background-color: #ff3e5e;
+  background-color: #454545;
 }
 #Salaries .companies-salaries .company-item .company-years--container .company-year h5 {
   font-size: 1.8rem;
@@ -855,8 +1085,6 @@ h3 {
   gap: 16px;
 }
 #Salaries .employees-salaries {
-  display: -ms-grid;
-  display: grid;
   gap: 24px;
 }
 #Salaries .employees-salaries .employee-details {
@@ -899,7 +1127,7 @@ h3 {
           flex-grow: auto;
   width: 100%;
   font-size: 1.4rem;
-  border: 2px solid #ff3e5e;
+  border: 2px solid #454545;
 }
 #Salaries .employees-salaries .employee-jobs--container h5 {
   font-weight: 600;
@@ -923,6 +1151,27 @@ h3 {
   font-weight: 700;
   text-align: center;
   margin-block: 48px;
+}
+@media screen and (min-width: 700px) {
+  #Salaries .projections-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 24px;
+  }
+  #Salaries .projections-container .projection-container {
+    width: 45%;
+  }
 }
 #Salaries .projection-container {
   padding: 16px;
@@ -1016,13 +1265,17 @@ h3 {
   border: 2px solid #ff3e5e;
 }
 #Salaries .projection-container div a:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Salaries .projection-container div a:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Salaries .projection-container div a:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #ff3e5e;
 }
 #Salaries .projection-container div button {
   display: -webkit-box;
@@ -1048,13 +1301,17 @@ h3 {
   border: 2px solid #ff3e5e;
 }
 #Salaries .projection-container div button:hover {
+  background-color: #454545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #454545;
+}
+#Salaries .projection-container div button:focus {
+  outline: 2px solid #FFFFFF;
 }
 #Salaries .projection-container div button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  color: #ff3e5e;
 }
 #Salaries .projection-container div button:hover {
   background-color: #2d2d2d;
