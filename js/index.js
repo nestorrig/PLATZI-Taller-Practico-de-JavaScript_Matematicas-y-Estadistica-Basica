@@ -37,30 +37,29 @@ function hideAndShowSection(references, sections) {
     }
     switch (references) {
         case 'Home':
-            header.style.backgroundColor = '#0085ff'
-            menu.style.backgroundColor = '#69b4ff'
+            header.style.borderColor = '#0085ff'
+            menu.style.color = '#69b4ff'
             break;
         case 'Geometry':
-            header.style.backgroundColor = '#006633'
-            menu.style.backgroundColor = '#40955d'
+            header.style.borderColor = '#006633'
+            menu.style.color = '#40955d'
             break;
         case 'Discounts':
-            header.style.backgroundColor = '#61398F'
-            menu.style.backgroundColor = '#8B5FBF'
+            header.style.borderColor = '#61398F'
+            menu.style.color = '#8B5FBF'
             break;
         case 'Basic-statistics':
-            header.style.backgroundColor = '#FF6600'
-            menu.style.backgroundColor = '#ff983f'
+            header.style.borderColor = '#FF6600'
+            menu.style.color = '#ff983f'
             break;
         case 'Salaries':
-            header.style.backgroundColor = '#d90429'
-            menu.style.backgroundColor = '#ff3e5e'
+            header.style.borderColor = '#d90429'
+            menu.style.color = '#ff3e5e'
             break;
         default:
             break;
     }
 }
-console.log(menu, menuSvgs);
 
 for (const svg of menuSvgs) {
     svg.addEventListener('click', showMenu)

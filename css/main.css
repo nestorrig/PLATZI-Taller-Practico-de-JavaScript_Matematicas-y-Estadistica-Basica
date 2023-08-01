@@ -5,64 +5,64 @@ body {
 }
 
 header {
+  position: fixed;
+  z-index: 1;
   width: 100%;
   height: 70px;
-  background-color: #0085ff;
+  background-color: #2d2d2d;
+  border-bottom: 2px solid #0085ff;
 }
 
 nav {
   position: relative;
   width: 100%;
   padding: 16px 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 nav p {
   font-size: 2.4rem;
 }
+@media screen and (min-width: 800px) {
+  nav {
+    flex-flow: row nowrap;
+  }
+}
 nav .mobile-menu {
   position: absolute;
-  width: 60%;
-  min-width: 220px;
-  max-width: 300px;
-  padding: 0 24px;
-  height: 300px;
+  width: 200px;
+  padding: 24px;
   right: 0;
   top: 70px;
-  background-color: #69b4ff;
+  background-color: #2d2d2d;
   border-radius: 0 0 0 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border-bottom: 2px solid #454545;
+  border-left: 2px solid #454545;
+  color: #69b4ff;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 nav .mobile-menu a {
   font-size: 2rem;
 }
 nav .mobile-menu a:hover {
-  text-decoration: underline;
-  font-weight: 700;
+  color: #a1a1a1;
+  transition: color 0.3s;
+}
+@media screen and (min-width: 800px) {
+  nav .mobile-menu {
+    position: static;
+    width: auto;
+    border: 0;
+    flex-flow: row nowrap;
+    padding: 0;
+    margin-right: 24px;
+  }
 }
 
 main {
@@ -73,17 +73,16 @@ main .section-item {
   width: 100%;
   max-width: 1300px;
   padding: 0 16px;
+  padding-top: 70px;
   margin: 0 auto;
 }
-
-h2 {
+main h2 {
   margin: 24px 0;
   font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
 }
-
-h3 {
+main h3 {
   margin: 24px 0;
   font-size: 2rem;
   font-weight: 700;
@@ -100,19 +99,10 @@ h3 {
 #Home .calculators-container {
   width: 100%;
   padding-bottom: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 36px;
 }
 #Home .calculators-container .calculator--item {
@@ -133,19 +123,10 @@ h3 {
   padding: 32px;
 }
 #Home .calculators-container .calculator--item article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 16px;
 }
 #Home .calculators-container .calculator--item article h4 {
@@ -153,19 +134,10 @@ h3 {
   font-weight: 500;
 }
 #Home .calculators-container .calculator--item article .section-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -177,15 +149,13 @@ h3 {
 }
 #Home .calculators-container .calculator--item article .section-link:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Home .calculators-container .calculator--item article .section-link:focus {
   outline: 2px solid #FFFFFF;
 }
 #Home .calculators-container .calculator--item article .section-link:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #69b4ff;
 }
 
@@ -196,35 +166,17 @@ h3 {
 }
 
 #Geometry .options-container.in-geometry {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 #Geometry .options-container.in-geometry a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -236,34 +188,23 @@ h3 {
 }
 #Geometry .options-container.in-geometry a:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Geometry .options-container.in-geometry a:focus {
   outline: 2px solid #FFFFFF;
 }
 #Geometry .options-container.in-geometry a:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #40955d;
 }
 #Geometry .geometry-item {
   padding-bottom: 24px;
 }
 #Geometry .geometry-item .form-geometry-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 680px) {
   #Geometry .geometry-item .form-container {
@@ -272,19 +213,10 @@ h3 {
 }
 @media screen and (min-width: 1100px) {
   #Geometry .geometry-item .form-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     gap: 36px;
   }
 }
@@ -293,34 +225,16 @@ h3 {
   max-width: 360px;
 }
 #Geometry .geometry-item form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #Geometry .geometry-item form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 #Geometry .geometry-item form label span {
@@ -338,19 +252,10 @@ h3 {
 }
 #Geometry .geometry-item form button {
   margin-block: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -362,15 +267,13 @@ h3 {
 }
 #Geometry .geometry-item form button:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Geometry .geometry-item form button:focus {
   outline: 2px solid #FFFFFF;
 }
 #Geometry .geometry-item form button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #86faa7;
 }
 #Geometry .geometry-item article {
@@ -389,50 +292,23 @@ h3 {
   padding: 8px;
   font-weight: 700;
   background-color: #454545;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 #Geometry .geometry-item .options-container.in-triangles {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 #Geometry .geometry-item .options-container.in-triangles a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -444,48 +320,28 @@ h3 {
 }
 #Geometry .geometry-item .options-container.in-triangles a:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Geometry .geometry-item .options-container.in-triangles a:focus {
   outline: 2px solid #FFFFFF;
 }
 #Geometry .geometry-item .options-container.in-triangles a:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #40955d;
 }
 
 #Discounts .options-container.in-discounts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 #Discounts .options-container.in-discounts a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -497,31 +353,20 @@ h3 {
 }
 #Discounts .options-container.in-discounts a:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Discounts .options-container.in-discounts a:focus {
   outline: 2px solid #FFFFFF;
 }
 #Discounts .options-container.in-discounts a:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #8B5FBF;
 }
 #Discounts label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 #Discounts label span {
@@ -529,7 +374,7 @@ h3 {
 }
 #Discounts label input {
   background-color: #2d2d2d;
-  border-bottom: 3px solid #f0dcf8;
+  border-bottom: 3px solid #edbeff;
   padding: 8px 16px;
   margin-bottom: 16px;
 }
@@ -539,19 +384,10 @@ h3 {
 }
 #Discounts button {
   margin-top: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -563,32 +399,21 @@ h3 {
 }
 #Discounts button:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Discounts button:focus {
   outline: 2px solid #FFFFFF;
 }
 #Discounts button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #8B5FBF;
 }
 #Discounts #couponResult,
 #Discounts #percentageResult {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   margin-block: 24px;
   width: 100%;
@@ -617,19 +442,10 @@ h3 {
 }
 @media screen and (min-width: 800px) {
   #Discounts .coupons-clues-container ol {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
   }
   #Discounts .coupons-clues-container ol div {
     width: 45%;
@@ -645,19 +461,10 @@ h3 {
 }
 
 #Basic-statistics form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 #Basic-statistics form label span {
@@ -676,19 +483,10 @@ h3 {
 }
 #Basic-statistics form label button {
   margin-block: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -700,15 +498,13 @@ h3 {
 }
 #Basic-statistics form label button:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Basic-statistics form label button:focus {
   outline: 2px solid #FFFFFF;
 }
 #Basic-statistics form label button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #ff983f;
 }
 #Basic-statistics .statistics-explication-container .explication-data {
@@ -717,73 +513,37 @@ h3 {
   padding: 8px;
   font-weight: 700;
   background-color: #454545;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 #Basic-statistics .statistics-explication-container .explication-data + p {
   margin-bottom: 24px;
 }
 #Basic-statistics .statistics-results-container {
   margin-block: 36px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 36px;
 }
 #Basic-statistics .statistics-results-container .result-item {
   width: 40%;
   max-width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.8rem;
   gap: 8px;
 }
 #Basic-statistics .statistics-results-container .result-item .result {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: #2d2d2d;
   width: 100%;
   height: 36px;
@@ -809,19 +569,10 @@ h3 {
 }
 @media screen and (min-width: 700px) {
   #Basic-statistics .statistics-explication-results-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 24px;
   }
   #Basic-statistics .statistics-explication-results-container .explication-item {
@@ -833,19 +584,10 @@ h3 {
   padding: 8px;
   font-weight: 700;
   background-color: #454545;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 24px;
   background-color: #1E1E1E;
 }
@@ -858,35 +600,17 @@ h3 {
   margin-bottom: 36px;
 }
 #Salaries .options-container.in-salaries {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 #Salaries .options-container.in-salaries a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -898,31 +622,20 @@ h3 {
 }
 #Salaries .options-container.in-salaries a:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Salaries .options-container.in-salaries a:focus {
   outline: 2px solid #FFFFFF;
 }
 #Salaries .options-container.in-salaries a:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #ff3e5e;
 }
 #Salaries .options-container.in-salaries button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -934,15 +647,13 @@ h3 {
 }
 #Salaries .options-container.in-salaries button:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Salaries .options-container.in-salaries button:focus {
   outline: 2px solid #FFFFFF;
 }
 #Salaries .options-container.in-salaries button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #ff3e5e;
 }
 #Salaries #Salaries-container {
@@ -965,7 +676,7 @@ h3 {
   height: 40px;
 }
 #Salaries #Salaries-container::-webkit-scrollbar-thumb:hover {
-  background: #fdf6fd;
+  background: #ffbfc8;
 }
 #Salaries .salaries {
   width: 100%;
@@ -976,19 +687,10 @@ h3 {
 }
 @media screen and (min-width: 700px) {
   #Salaries .salaries {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
   }
   #Salaries .salaries .company-item,
   #Salaries .salaries .employee-item {
@@ -997,19 +699,10 @@ h3 {
 }
 @media screen and (min-width: 1000px) {
   #Salaries .salaries {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
   }
   #Salaries .salaries .employee-item {
     width: 30%;
@@ -1029,36 +722,18 @@ h3 {
   color: #ff3e5e;
 }
 #Salaries .companies-salaries .company-item .company-years--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 #Salaries .companies-salaries .company-item .company-years--container .company-year {
   width: 100%;
   padding: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 24px;
 }
 #Salaries .companies-salaries .company-item .company-years--container .company-year:nth-child(odd) {
@@ -1069,38 +744,20 @@ h3 {
   font-weight: 600;
 }
 #Salaries .companies-salaries .company-item .company-years--container .company-year .salaries-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 16px;
 }
 #Salaries .employees-salaries {
   gap: 24px;
 }
 #Salaries .employees-salaries .employee-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px;
   font-size: 2.4rem;
   font-weight: 700;
@@ -1109,22 +766,11 @@ h3 {
   color: #ff3e5e;
 }
 #Salaries .employees-salaries .employee-jobs--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-flex: auto;
-      -ms-flex-positive: auto;
-          flex-grow: auto;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: auto;
   width: 100%;
   font-size: 1.4rem;
   border: 2px solid #454545;
@@ -1154,19 +800,10 @@ h3 {
 }
 @media screen and (min-width: 700px) {
   #Salaries .projections-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
   }
   #Salaries .projections-container .projection-container {
@@ -1180,51 +817,24 @@ h3 {
 }
 #Salaries .projection-container div {
   margin-bottom: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 #Salaries .projection-container div form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 #Salaries .projection-container div form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 #Salaries .projection-container div form label span {
@@ -1232,7 +842,7 @@ h3 {
 }
 #Salaries .projection-container div form label select {
   background-color: #2d2d2d;
-  border-bottom: 3px solid #fdf6fd;
+  border-bottom: 3px solid #ffbfc8;
   padding: 8px 16px;
   margin-bottom: 16px;
   width: auto;
@@ -1242,19 +852,10 @@ h3 {
   border-color: #d90429;
 }
 #Salaries .projection-container div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -1266,31 +867,20 @@ h3 {
 }
 #Salaries .projection-container div a:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Salaries .projection-container div a:focus {
   outline: 2px solid #FFFFFF;
 }
 #Salaries .projection-container div a:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #ff3e5e;
 }
 #Salaries .projection-container div button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   padding: 8px 24px;
@@ -1302,38 +892,27 @@ h3 {
 }
 #Salaries .projection-container div button:hover {
   background-color: #454545;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #Salaries .projection-container div button:focus {
   outline: 2px solid #FFFFFF;
 }
 #Salaries .projection-container div button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   color: #ff3e5e;
 }
 #Salaries .projection-container div button:hover {
   background-color: #2d2d2d;
 }
 #Salaries .projection-container article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
   width: 100%;
   height: 120px;
   background-color: #2d2d2d;
   border-radius: 12px;
   text-align: center;
-}
+}/*# sourceMappingURL=main.css.map */

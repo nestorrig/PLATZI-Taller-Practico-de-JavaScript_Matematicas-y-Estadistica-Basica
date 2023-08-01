@@ -1,21 +1,20 @@
 
 $blue-100:#0085ff;
 $blue-200:#69b4ff;
-$blue-300:#e0ffff;
+$blue-300:#c6ffff;
 $orange-100:#FF6600;
 $orange-200:#ff983f;
 $orange-300:#ffffa1;
 $purple-100:#61398F;
 $purple-200:#8B5FBF;
-$purple-300:#f0dcf8;
+$purple-300:#edbeff;
 $red-100:#d90429;
 $red-200:#ff3e5e;
-$red-300:#fdf6fd;
+$red-300:#ffbfc8;
 $green-100:#006633;
 $green-200:#40955d;
 $green-300:#86faa7;
 $text-100:#FFFFFF;
-$text-200:#9e9e9e;
 $bg-100:#1E1E1E;
 $bg-200:#2d2d2d;
 $bg-300:#454545;
@@ -91,9 +90,12 @@ body {
 }
 
 header {
+    position: fixed;
+    z-index: 1;
     width: 100%;
     height: 70px;
-    background-color: $blue-100;
+    background-color: $bg-200;
+    border-bottom: 2px solid $blue-100;
 }
 nav {
     position: relative;
@@ -101,26 +103,36 @@ nav {
     padding: 16px 8px;
     @include flexible(row, nowrap, space-between, center);
     p {font-size: 2.4rem;}
-
+    @include responsive(800px){
+        flex-flow: row nowrap;
+    }
     .mobile-menu {
         position: absolute;
-        width: 60%;
-        min-width: 220px;
-        max-width: 300px;
-        padding: 0 24px;
-        height: 300px;
+        width: 200px; 
+        padding: 24px;
         right: 0;
         top: 70px;
-        background-color: $blue-200;
+        background-color: $bg-200;
         border-radius: 0 0 0 24px;
+        border-bottom: 2px solid $bg-300;
+        border-left: 2px solid $bg-300;
+        color: $blue-200;
         @include flexible(column, nowrap, center, center);
         gap: 24px;
         a {
             font-size: 2rem;
             &:hover {
-                text-decoration: underline;
-                font-weight: 700;
+                color: #a1a1a1;
+                transition: color .3s;
             }
+        }
+        @include responsive(800px){
+            position: static;
+            width: auto;
+            border: 0;
+            flex-flow: row nowrap;
+            padding: 0;
+            margin-right: 24px;
         }
     }
 }
@@ -131,14 +143,15 @@ main {
         width: 100%;
         max-width: 1300px;
         padding: 0 16px;
+        padding-top: 70px;
         margin: 0 auto;
     }
-}
-h2 {
-    @include titles(2.4rem);
-}
-h3 {
-    @include titles(2rem);
+    h2 {
+        @include titles(2.4rem);
+    }
+    h3 {
+        @include titles(2rem);
+    }
 }
 
 #Home {
