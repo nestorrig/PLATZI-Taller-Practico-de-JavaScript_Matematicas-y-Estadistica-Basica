@@ -47,9 +47,9 @@ function showResultsSTC(shape,input, perimeterTag, areaTag){
             printResults(results);
             break;
         case 'triangle':
-            const side1 = parseInt(input[0].value) || 0;
-            const side2 = parseInt(input[1].value) || 0;
-            const side3 = parseInt(input[2].value) || 0;
+            const side1 = parseFloat(input[0].value) || 0;
+            const side2 = parseFloat(input[1].value) || 0;
+            const side3 = parseFloat(input[2].value) || 0;
             results = PlatziMath.triangle(side1, side2, side3);
             printResults(results);
             break;
