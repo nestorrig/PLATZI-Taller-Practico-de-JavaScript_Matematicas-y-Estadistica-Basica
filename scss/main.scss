@@ -119,20 +119,30 @@ nav {
         color: $blue-200;
         @include flexible(column, nowrap, center, center);
         gap: 24px;
-        a {
-            font-size: 2rem;
-            &:hover {
-                color: #a1a1a1;
-                transition: color .3s;
-            }
-        }
         @include responsive(800px){
-            position: static;
-            width: auto;
-            border: 0;
+            display: none;
+        }
+    }
+    .desktop-menu {
+        display: none;
+        @include responsive(800px){
+            color: $blue-200;
+            @include flexible(row, wrap, center, center);
+            gap: 24px;
             flex-flow: row nowrap;
-            padding: 0;
             margin-right: 24px;
+        }
+    }
+    .section-link {
+        font-size: 2rem;
+        &:hover {
+            color: #a1a1a1;
+            transition: color .3s;
+        }
+    }
+    .icon-menu {
+        @include responsive(800px){
+            display: none;
         }
     }
 }

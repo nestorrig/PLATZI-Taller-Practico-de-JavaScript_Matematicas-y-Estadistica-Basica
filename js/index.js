@@ -9,7 +9,7 @@ const triangleLinks = document.getElementsByClassName("triangle-link");
 const discountSections = document.getElementsByClassName("discount-container");
 const discountLinks = document.getElementsByClassName("discount-link");
 const menuSvgs = document.getElementsByClassName("menu");
-const menu = document.getElementById("Menu");
+const menu = document.getElementById("MenuMobile");
 const header = document.getElementById("header");
 
 function matchLinks(links, sections) {
