@@ -16,7 +16,9 @@ header {
 nav {
   position: relative;
   width: 100%;
+  max-width: 1200px;
   padding: 16px 8px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -9,7 +9,8 @@ const triangleLinks = document.getElementsByClassName("triangle-link");
 const discountSections = document.getElementsByClassName("discount-container");
 const discountLinks = document.getElementsByClassName("discount-link");
 const menuSvgs = document.getElementsByClassName("menu");
-const menu = document.getElementById("MenuMobile");
+const menuMobile = document.getElementById("MenuMobile");
+const menuDesktop = document.getElementById("MenuDesktop");
 const header = document.getElementById("header");
 
 function matchLinks(links, sections) {
@@ -38,23 +39,28 @@ function hideAndShowSection(references, sections) {
     switch (references) {
         case 'Home':
             header.style.borderColor = '#0085ff'
-            menu.style.color = '#69b4ff'
+            menuMobile.style.color = '#69b4ff'
+            menuDesktop.style.color = '#69b4ff'
             break;
         case 'Geometry':
             header.style.borderColor = '#006633'
-            menu.style.color = '#40955d'
+            menuMobile.style.color = '#40955d'
+            menuDesktop.style.color = '#40955d'
             break;
         case 'Discounts':
             header.style.borderColor = '#61398F'
-            menu.style.color = '#8B5FBF'
+            menuMobile.style.color = '#8B5FBF'
+            menuDesktop.style.color = '#8B5FBF'
             break;
         case 'Basic-statistics':
             header.style.borderColor = '#FF6600'
-            menu.style.color = '#ff983f'
+            menuMobile.style.color = '#ff983f'
+            menuDesktop.style.color = '#ff983f'
             break;
         case 'Salaries':
             header.style.borderColor = '#d90429'
-            menu.style.color = '#ff3e5e'
+            menuMobile.style.color = '#ff3e5e'
+            menuDesktop.style.color = '#ff3e5e'
             break;
         default:
             break;
@@ -68,5 +74,5 @@ function showMenu() {
     for (const svg of menuSvgs) {
         svg.classList.toggle('inactive')
     }
-    menu.classList.toggle('inactive')
+    menuMobile.classList.toggle('inactive')
 }

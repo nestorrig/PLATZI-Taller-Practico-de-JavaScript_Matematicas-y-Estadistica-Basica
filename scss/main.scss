@@ -100,7 +100,9 @@ header {
 nav {
     position: relative;
     width: 100%;
+    max-width: 1200px;
     padding: 16px 8px;
+    margin: 0 auto;
     @include flexible(row, nowrap, space-between, center);
     p {font-size: 2.4rem;}
     @include responsive(800px){
