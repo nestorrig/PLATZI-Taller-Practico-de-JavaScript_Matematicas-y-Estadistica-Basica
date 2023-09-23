@@ -1,3 +1,35 @@
+@-webkit-keyframes showMenu {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 70px;
+  }
+}
+@keyframes showMenu {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 70px;
+  }
+}
+@-webkit-keyframes hideMenu {
+  from {
+    top: 70px;
+  }
+  to {
+    top: -200px;
+  }
+}
+@keyframes hideMenu {
+  from {
+    top: 70px;
+  }
+  to {
+    top: -200px;
+  }
+}
 body {
   font-family: "Noto Sans", sans-serif;
   background-color: #1E1E1E;
@@ -6,7 +38,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 70px;
   background-color: #2d2d2d;
@@ -44,37 +76,6 @@ nav p {
             flex-flow: row nowrap;
   }
 }
-nav .mobile-menu {
-  position: absolute;
-  width: 200px;
-  padding: 24px;
-  right: 0;
-  top: 70px;
-  background-color: #2d2d2d;
-  border-radius: 0 0 0 24px;
-  border-bottom: 2px solid #454545;
-  border-left: 2px solid #454545;
-  color: #69b4ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 24px;
-}
-@media screen and (min-width: 800px) {
-  nav .mobile-menu {
-    display: none;
-  }
-}
 nav .desktop-menu {
   display: none;
 }
@@ -100,18 +101,56 @@ nav .desktop-menu {
     margin-right: 24px;
   }
 }
-nav .section-link {
-  font-size: 2rem;
-}
-nav .section-link:hover {
-  color: #a1a1a1;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
 @media screen and (min-width: 800px) {
   nav .icon-menu {
     display: none;
   }
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 24px;
+  right: 0;
+  top: -200px;
+  background-color: #2d2d2d;
+  border-radius: 0 0 24px 24px;
+  border-bottom: 2px solid #454545;
+  border-left: 2px solid #454545;
+  border-right: 2px solid #454545;
+  color: #69b4ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+@media screen and (min-width: 800px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu .section-link {
+  font-size: 1.8rem;
+}
+
+.section-link {
+  font-size: 2rem;
+}
+.section-link:hover {
+  color: #a1a1a1;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 main {
@@ -1017,7 +1056,7 @@ main h3 {
 }
 #Salaries .salaries {
   width: 100%;
-  height: 240px;
+  height: 360px;
 }
 #Salaries .salaries > div {
   margin-bottom: 24px;

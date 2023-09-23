@@ -2,6 +2,7 @@
 
 const sections = document.getElementsByClassName("section-item");
 const links = document.getElementsByClassName("section-link");
+const menuLinks = document.getElementsByClassName("menu-link");
 const geometrySections = document.getElementsByClassName("geometry-item");
 const geometryLinks = document.getElementsByClassName("geometry-link")
 const triangleSections = document.getElementsByClassName("triangle-item");
@@ -12,6 +13,8 @@ const menuSvgs = document.getElementsByClassName("menu");
 const menuMobile = document.getElementById("MenuMobile");
 const menuDesktop = document.getElementById("MenuDesktop");
 const header = document.getElementById("header");
+
+let menuAnimation
 
 function matchLinks(links, sections) {
     for (const iterator of links) {
@@ -70,9 +73,21 @@ function hideAndShowSection(references, sections) {
 for (const svg of menuSvgs) {
     svg.addEventListener('click', showMenu)
 }
+for (const link of menuLinks) {
+    link.addEventListener('click', showMenu)
+}
 function showMenu() {
     for (const svg of menuSvgs) {
         svg.classList.toggle('inactive')
     }
-    menuMobile.classList.toggle('inactive')
+    animateMenu()
+}
+function animateMenu() {
+    menuMobile.getAnimations().map((animation) => menuAnimation = animation.animationName)
+    console.log(menuAnimation);
+    if (menuAnimation === undefined || menuAnimation === 'hideMenu') {
+        menuMobile.style.animation = 'showMenu .3s linear both'
+    } else {
+        menuMobile.style.animation = 'hideMenu .3s linear both'
+    }
 }
